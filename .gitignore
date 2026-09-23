@@ -2,3 +2,4 @@
 *.docx
 deploy-zyra.zip
 Imagem do Codex*.png
+node_modules/

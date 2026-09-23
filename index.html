@@ -6,14 +6,15 @@
   <title>Zyra | Seu time de crescimento sob demanda</title>
   <meta name="description" content="A Zyra ajuda empresas a crescer de forma estruturada: estratégia, marketing, tráfego pago, vendas, atendimento, tecnologia e CRM em uma única operação. Sem fidelidade, a partir de R$ 550/mês." />
   <meta name="theme-color" content="#060F24" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta property="og:title" content="Zyra | Seu time de crescimento sob demanda" />
   <meta property="og:description" content="Estratégia e execução para atrair clientes, vender mais e organizar seu marketing. Sem fidelidade." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/config.js"></script>
+  <link rel="stylesheet" href="css/tailwind.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="bg-white font-sans text-brand-900 antialiased">
@@ -23,7 +24,10 @@
   <header data-header class="site-header fixed inset-x-0 top-0 z-50 border-b border-white/10">
     <div class="mx-auto flex h-[72px] max-w-content items-center justify-between px-5 sm:px-8">
       <a href="index.html" class="flex items-center gap-2.5" aria-label="Zyra, página inicial">
-        <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 text-lg font-extrabold text-white shadow-glow">Z</span>
+        <span class="brand-logo flex items-center">
+          <img src="assets/img/logo-zyra.png" alt="" class="logo-light h-7 w-auto" />
+          <img src="assets/img/logo-zyra-dark.png" alt="" class="logo-dark hidden h-7 w-auto" />
+        </span>
         <span class="brand-text text-lg font-extrabold tracking-tight">Zyra</span>
       </a>
 
@@ -71,7 +75,9 @@
       <div class="absolute -top-32 left-1/2 h-80 w-[48rem] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[130px]" aria-hidden="true"></div>
 
       <div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8 sm:py-32 lg:py-36">
-        <span class="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-100 backdrop-blur">
+        <img src="assets/img/logo-zyra.png" width="527" height="206" alt="Zyra"
+             class="reveal mx-auto h-12 w-auto sm:h-14" />
+        <span class="reveal mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-100 backdrop-blur">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
           Seu time de crescimento sob demanda
         </span>
@@ -489,7 +495,7 @@
           <div class="reveal relative order-2 lg:order-1">
             <div class="glow-blob -inset-6 bg-brand-300/40" aria-hidden="true"></div>
             <figure class="relative overflow-hidden rounded-2xl border border-brand-100 shadow-card">
-              <img src="assets/img/team-meeting.png" width="1672" height="940" loading="lazy" decoding="async"
+              <img src="assets/img/team-meeting.webp" width="1200" height="675" loading="lazy" decoding="async"
                    alt="Time da Zyra reunido ao redor de um notebook, analisando resultados junto ao cliente"
                    class="h-72 w-full object-cover sm:h-80 lg:h-[26rem]" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/10 to-transparent" aria-hidden="true"></div>
@@ -872,7 +878,7 @@
 
     <!-- ================= CTA FINAL ================= -->
     <section class="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28">
-      <img src="assets/img/hero-dashboard.png" width="1672" height="940" loading="lazy" alt="" aria-hidden="true"
+      <img src="assets/img/hero-dashboard.webp" width="1400" height="787" loading="lazy" alt="" aria-hidden="true"
            class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]" />
       <div class="absolute inset-0 bg-gradient-to-b from-brand-950/80 via-brand-950/85 to-brand-950" aria-hidden="true"></div>
       <div class="grid-overlay absolute inset-0 opacity-40" aria-hidden="true"></div>
@@ -897,7 +903,7 @@
       <div class="grid gap-10 lg:grid-cols-12">
         <div class="lg:col-span-5">
           <a href="index.html" class="flex items-center gap-2.5" aria-label="Zyra, página inicial">
-            <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 text-lg font-extrabold text-white">Z</span>
+            <img src="assets/img/logo-zyra.png" alt="" class="h-7 w-auto" />
             <span class="text-lg font-extrabold tracking-tight text-white">Zyra</span>
           </a>
           <p class="mt-4 max-w-sm text-sm leading-relaxed">Seu time de crescimento sob demanda: estratégia e execução para atrair clientes, vender mais e organizar seu marketing.</p>

@@ -95,6 +95,17 @@ p {
   border-color: rgba(15, 35, 80, 0.15);
 }
 
+/* Logo da marca: versão clara sobre o hero escuro, escura sobre o header branco */
+.site-header .brand-logo .logo-dark {
+  display: none;
+}
+.site-header.is-scrolled .brand-logo .logo-light {
+  display: none;
+}
+.site-header.is-scrolled .brand-logo .logo-dark {
+  display: block;
+}
+
 /* Reveal on scroll */
 .reveal {
   opacity: 0;
