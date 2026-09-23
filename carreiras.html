@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Carreiras | Trabalhe com a gente | Zyra</title>
   <meta name="description" content="Estamos construindo um time para fazer negócios crescerem. Vagas 100% remotas em marketing, vendas, tecnologia, recrutamento e customer success. Contratação PJ." />
   <meta name="theme-color" content="#060F24" />
@@ -41,7 +41,7 @@
         </button>
       </div>
     </div>
-    <div id="menu-mobile" data-mobile-menu class="hidden border-t border-brand-100 bg-white lg:hidden">
+    <div id="menu-mobile" data-mobile-menu class="hidden max-h-[calc(100dvh-72px)] overflow-y-auto border-t border-brand-100 bg-white lg:hidden">
       <nav class="mx-auto flex max-w-content flex-col gap-1 px-5 py-4 sm:px-8" aria-label="Menu móvel">
         <a href="index.html#servicos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Serviços</a>
         <a href="index.html#como-funciona" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Como funciona</a>
@@ -82,7 +82,7 @@
     </section>
 
     <!-- ================= COMO TRABALHAMOS ================= -->
-    <section class="bg-white py-20 sm:py-28">
+    <section class="bg-white py-16 sm:py-28">
       <div class="mx-auto max-w-content px-5 sm:px-8">
         <div class="mx-auto max-w-2xl text-center">
           <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Como trabalhamos</p>
@@ -116,7 +116,7 @@
     </section>
 
     <!-- ================= BENEFÍCIOS ================= -->
-    <section class="bg-brand-50 py-20 sm:py-28">
+    <section class="bg-brand-50 py-16 sm:py-28">
       <div class="mx-auto max-w-content px-5 sm:px-8">
         <div class="mx-auto max-w-2xl text-center">
           <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Benefícios</p>
@@ -150,7 +150,7 @@
     </section>
 
     <!-- ================= VAGAS ================= -->
-    <section id="vagas" class="bg-white py-20 sm:py-28">
+    <section id="vagas" class="bg-white py-16 sm:py-28">
       <div class="mx-auto max-w-content px-5 sm:px-8">
         <div class="mx-auto max-w-2xl text-center">
           <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Vagas abertas</p>
@@ -271,7 +271,7 @@
     </section>
 
     <!-- ================= BANCO DE TALENTOS ================= -->
-    <section id="banco-talentos" class="bg-brand-50 py-20 sm:py-28">
+    <section id="banco-talentos" class="bg-brand-50 py-16 sm:py-28">
       <div class="mx-auto max-w-content px-5 sm:px-8">
         <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -296,21 +296,21 @@
               <div class="space-y-5">
                 <div>
                   <label for="j-nome" class="block text-sm font-semibold text-brand-900">Seu nome</label>
-                  <input id="j-nome" name="nome" type="text" required autocomplete="name" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                  <input id="j-nome" name="nome" type="text" required autocomplete="name" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm focus:border-brand-400 focus:bg-white focus:outline-none" />
                 </div>
                 <div class="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label for="j-email" class="block text-sm font-semibold text-brand-900">E-mail</label>
-                    <input id="j-email" name="email" type="email" required autocomplete="email" spellcheck="false" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                    <input id="j-email" name="email" type="email" required autocomplete="email" spellcheck="false" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm focus:border-brand-400 focus:bg-white focus:outline-none" />
                   </div>
                   <div>
                     <label for="j-whats" class="block text-sm font-semibold text-brand-900">WhatsApp</label>
-                    <input id="j-whats" name="whatsapp" type="tel" required autocomplete="tel" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                    <input id="j-whats" name="whatsapp" type="tel" required autocomplete="tel" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm focus:border-brand-400 focus:bg-white focus:outline-none" />
                   </div>
                 </div>
                 <div>
                   <label for="j-vaga" class="block text-sm font-semibold text-brand-900">Vaga de interesse</label>
-                  <select id="j-vaga" name="vaga" required class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 focus:border-brand-400 focus:bg-white focus:outline-none">
+                  <select id="j-vaga" name="vaga" required class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm focus:border-brand-400 focus:bg-white focus:outline-none">
                     <option value="">Selecione uma opção</option>
                     <option>SDR (Pré-vendas)</option>
                     <option>Vendedor Closer</option>
@@ -323,15 +323,15 @@
                 </div>
                 <div>
                   <label for="j-portfolio" class="block text-sm font-semibold text-brand-900">LinkedIn / Portfólio <span class="font-normal text-brand-800/50">(opcional)</span></label>
-                  <input id="j-portfolio" name="portfolio" type="url" placeholder="https://" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                  <input id="j-portfolio" name="portfolio" type="url" placeholder="https://" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
                 </div>
                 <div>
                   <label for="j-curriculo" class="block text-sm font-semibold text-brand-900">Link do currículo <span class="font-normal text-brand-800/50">(opcional, Google Drive, etc.)</span></label>
-                  <input id="j-curriculo" name="curriculo" type="url" placeholder="https://" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                  <input id="j-curriculo" name="curriculo" type="url" placeholder="https://" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
                 </div>
                 <div>
                   <label for="j-sobre" class="block text-sm font-semibold text-brand-900">Conte um pouco sobre você</label>
-                  <textarea id="j-sobre" name="sobre" rows="4" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 focus:border-brand-400 focus:bg-white focus:outline-none"></textarea>
+                  <textarea id="j-sobre" name="sobre" rows="4" class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-base text-brand-900 sm:text-sm focus:border-brand-400 focus:bg-white focus:outline-none"></textarea>
                 </div>
               </div>
               <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
@@ -364,7 +364,7 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-white/10 bg-brand-950 py-14 text-brand-100/70">
+  <footer class="border-t border-white/10 bg-brand-950 pt-14 pb-24 text-brand-100/70 sm:pb-14">
     <div class="mx-auto max-w-content px-5 sm:px-8">
       <div class="grid gap-10 lg:grid-cols-12">
         <div class="lg:col-span-5">
