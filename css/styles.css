@@ -1,0 +1,238 @@
+:root {
+  --brand-950: #060F24;
+  --brand-500: #2E6BFF;
+  --header-h: 72px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(46, 107, 255, 0.15);
+}
+
+::selection {
+  background: rgba(46, 107, 255, 0.22);
+}
+
+/* Acessibilidade: foco visível consistente (nunca esconder sem substituto) */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand-500) !important;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Toque: remove atraso do duplo-tap */
+:where(a, button, [role='button'], input, select, textarea, summary) {
+  touch-action: manipulation;
+}
+
+/* Títulos sem viúvas/órfãs */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: #fff;
+  color: var(--brand-950);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 12px 32px -12px rgba(10, 23, 51, 0.4);
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Header adaptativo (hero escuro -> header claro ao rolar) */
+.site-header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.site-header .nav-link,
+.site-header .brand-text {
+  color: rgba(255, 255, 255, 0.88);
+}
+.site-header .nav-link:hover {
+  color: #fff;
+}
+.site-header .menu-btn {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.site-header.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  box-shadow: 0 1px 0 rgba(10, 23, 51, 0.06), 0 12px 32px -20px rgba(10, 23, 51, 0.35);
+}
+.site-header.is-scrolled .nav-link,
+.site-header.is-scrolled .brand-text {
+  color: #0F2350;
+}
+.site-header.is-scrolled .nav-link:hover {
+  color: #2E6BFF;
+}
+.site-header.is-scrolled .menu-btn {
+  color: #0F2350;
+  border-color: rgba(15, 35, 80, 0.15);
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Textura sutil de grade para fundos escuros */
+.grid-overlay {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Marquee de clientes */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Acordeão */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-panel[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+.faq-panel > div {
+  overflow: hidden;
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+[data-open='true'] .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Número das etapas */
+.step-num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Molduras de imagem (destaque das 3 fotos) ---------- */
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.browser-dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 9999px;
+}
+.browser-bar--light {
+  background: #f2f6ff;
+  border-bottom: 1px solid #dce8ff;
+}
+
+/* Brilho decorativo atrás das imagens */
+.glow-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+/* Selo flutuante sobre a imagem */
+.float-chip {
+  position: absolute;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(6, 15, 36, 0.78);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 0.85rem;
+  box-shadow: 0 20px 48px -20px rgba(6, 15, 36, 0.7);
+}
+.float-chip--light {
+  border-color: #dce8ff;
+  background: rgba(255, 255, 255, 0.94);
+}
+
+/* Botão flutuante de WhatsApp (conversão) */
+.wa-float {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  background: #22c55e;
+  color: #fff;
+  padding: 0.85rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 16px 40px -12px rgba(34, 197, 94, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px -12px rgba(34, 197, 94, 0.8);
+}
+.wa-float__label {
+  display: none;
+}
+@media (min-width: 640px) {
+  .wa-float__label {
+    display: inline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

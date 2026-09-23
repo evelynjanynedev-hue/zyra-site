@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyra | Seu time de crescimento sob demanda</title>
+  <meta name="description" content="A Zyra ajuda empresas a crescer de forma estruturada: estratégia, marketing, tráfego pago, vendas, atendimento, tecnologia e CRM em uma única operação. Sem fidelidade, a partir de R$ 550/mês." />
+  <meta name="theme-color" content="#060F24" />
+  <meta property="og:title" content="Zyra | Seu time de crescimento sob demanda" />
+  <meta property="og:description" content="Estratégia e execução para atrair clientes, vender mais e organizar seu marketing. Sem fidelidade." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/config.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-white font-sans text-brand-900 antialiased">
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER ================= -->
+  <header data-header class="site-header fixed inset-x-0 top-0 z-50 border-b border-white/10">
+    <div class="mx-auto flex h-[72px] max-w-content items-center justify-between px-5 sm:px-8">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Zyra, página inicial">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 text-lg font-extrabold text-white shadow-glow">Z</span>
+        <span class="brand-text text-lg font-extrabold tracking-tight">Zyra</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Principal">
+        <a href="#servicos" class="nav-link text-sm font-medium transition">Serviços</a>
+        <a href="#como-funciona" class="nav-link text-sm font-medium transition">Como funciona</a>
+        <a href="#planos" class="nav-link text-sm font-medium transition">Planos</a>
+        <a href="#parceiro" class="nav-link text-sm font-medium transition">Seja Parceiro</a>
+        <a href="carreiras.html" class="nav-link text-sm font-medium transition">Carreiras</a>
+        <a href="#duvidas" class="nav-link text-sm font-medium transition">Dúvidas</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5562920023208" target="_blank" rel="noopener"
+           class="hidden rounded-xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600 sm:inline-flex">
+          Falar no WhatsApp
+        </a>
+        <button type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile"
+                class="menu-btn grid h-10 w-10 place-items-center rounded-xl border transition lg:hidden">
+          <span class="sr-only">Abrir menu</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="menu-mobile" data-mobile-menu class="hidden border-t border-brand-100 bg-white lg:hidden">
+      <nav class="mx-auto flex max-w-content flex-col gap-1 px-5 py-4 sm:px-8" aria-label="Menu móvel">
+        <a href="#servicos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Serviços</a>
+        <a href="#como-funciona" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Como funciona</a>
+        <a href="#planos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Planos</a>
+        <a href="#parceiro" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Seja Parceiro</a>
+        <a href="carreiras.html" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Carreiras</a>
+        <a href="#duvidas" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-800 hover:bg-brand-50">Dúvidas</a>
+        <a href="https://wa.me/5562920023208" target="_blank" rel="noopener" class="mt-2 rounded-xl bg-brand-500 px-4 py-3 text-center text-sm font-semibold text-white">Falar no WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ================= HERO ================= -->
+    <section class="relative overflow-hidden bg-brand-950 pt-[72px] text-white">
+      <div class="grid-overlay absolute inset-0 opacity-50" aria-hidden="true"></div>
+      <div class="absolute -top-32 left-1/2 h-80 w-[48rem] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[130px]" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-3xl px-5 py-24 text-center sm:px-8 sm:py-32 lg:py-36">
+        <span class="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-100 backdrop-blur">
+          <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+          Seu time de crescimento sob demanda
+        </span>
+        <h1 class="reveal mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+          Estratégia e execução por nossa conta.
+          <span class="bg-gradient-to-r from-brand-300 to-brand-500 bg-clip-text text-transparent">Você só aprova e vê os resultados.</span>
+        </h1>
+        <p class="reveal mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-brand-100/80">
+          Você não precisa montar uma equipe nem se preocupar com o operacional. Nosso time cuida de marketing, tráfego pago, atendimento e CRM, <strong class="font-semibold text-white">tudo sob medida para o seu negócio</strong>. Nada genérico.
+        </p>
+        <div class="reveal mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="#contato" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-7 py-4 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
+            Quero começar agora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#planos" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
+            Ver os planos
+          </a>
+        </div>
+        <div class="reveal mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-brand-100/75">
+          <span class="inline-flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded-full bg-emerald-400/20 text-[11px] text-emerald-300" aria-hidden="true">✓</span>Sem fidelidade</span>
+          <span class="inline-flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded-full bg-emerald-400/20 text-[11px] text-emerald-300" aria-hidden="true">✓</span>A partir de R$ 550/mês</span>
+          <span class="inline-flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded-full bg-emerald-400/20 text-[11px] text-emerald-300" aria-hidden="true">✓</span>CRM incluso</span>
+        </div>
+
+        <!-- Prova social -->
+        <div class="reveal mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-8 sm:flex-row sm:gap-8">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-400" aria-hidden="true">★★★★★</span>
+            <span class="text-sm text-brand-100/80">Clientes em todo o Brasil</span>
+          </div>
+          <span class="hidden h-4 w-px bg-white/15 sm:block" aria-hidden="true"></span>
+          <p class="text-sm text-brand-100/80"><strong class="font-semibold text-white">80+</strong> empresas atendidas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLIENTES ================= -->
+    <section class="border-b border-brand-100 bg-white py-12">
+      <p class="text-center text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Empresas que já crescem com a gente</p>
+      <div class="marquee-mask mt-8 overflow-hidden">
+        <div class="marquee-track flex w-max animate-marquee items-center gap-4">
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Clínica Vitta Bem</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Óptica Prime Visão</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Padaria Pão &amp; Alma</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Studio Bella Pele</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">AutoCenter Motor Forte</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Contábil Aliança</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Pet Shop Amigo Fiel</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Academia Corpo Ativo</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Casa &amp; Estilo Decor</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Prado &amp; Lima Advocacia</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Sabor da Serra Restaurante</span>
+          <span class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Construforte Materiais</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Clínica Vitta Bem</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Óptica Prime Visão</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Padaria Pão &amp; Alma</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Studio Bella Pele</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">AutoCenter Motor Forte</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Contábil Aliança</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Pet Shop Amigo Fiel</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Academia Corpo Ativo</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Casa &amp; Estilo Decor</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Prado &amp; Lima Advocacia</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Sabor da Serra Restaurante</span>
+          <span aria-hidden="true" class="whitespace-nowrap rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700">Construforte Materiais</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROMESSA + DORES ================= -->
+    <section class="bg-brand-50 py-20 sm:py-24">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+          <div>
+            <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Nosso propósito</p>
+            <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+              Seu crescimento é o nosso propósito.
+            </h2>
+            <p class="reveal mt-5 text-base leading-relaxed text-brand-800/75">
+              Crescimento não acontece por acaso. Ele precisa de estratégia, execução e melhoria constante. A Zyra assume isso por você.
+            </p>
+            <p class="reveal mt-6 rounded-2xl border border-brand-100 bg-white p-5 text-sm font-medium text-brand-800 shadow-soft">
+              Você não precisa montar uma equipe inteira. <span class="font-semibold text-brand-600">Temos um time trabalhando pelo crescimento da sua empresa.</span>
+            </p>
+          </div>
+
+          <div>
+            <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Isso parece familiar?</p>
+            <h2 class="reveal mt-4 text-2xl font-bold tracking-tight text-brand-900 sm:text-3xl">
+              Se você se identificar com algo abaixo, a gente resolve.
+            </h2>
+            <ul class="reveal mt-6 divide-y divide-brand-100 overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-soft">
+              <li class="flex items-start gap-3 px-5 py-4 text-sm text-brand-800"><span class="mt-0.5 text-brand-400" aria-hidden="true">✕</span>Você investe em marketing e não sabe o que está funcionando.</li>
+              <li class="flex items-start gap-3 px-5 py-4 text-sm text-brand-800"><span class="mt-0.5 text-brand-400" aria-hidden="true">✕</span>Os leads chegam e se perdem no caminho.</li>
+              <li class="flex items-start gap-3 px-5 py-4 text-sm text-brand-800"><span class="mt-0.5 text-brand-400" aria-hidden="true">✕</span>Você não tem tempo para cuidar das redes sociais.</li>
+              <li class="flex items-start gap-3 px-5 py-4 text-sm text-brand-800"><span class="mt-0.5 text-brand-400" aria-hidden="true">✕</span>O atendimento depende totalmente de você.</li>
+              <li class="flex items-start gap-3 px-5 py-4 text-sm text-brand-800"><span class="mt-0.5 text-brand-400" aria-hidden="true">✕</span>As vendas oscilam todos os meses.</li>
+              <li class="flex items-start gap-3 px-5 py-4 text-sm text-brand-800"><span class="mt-0.5 text-brand-400" aria-hidden="true">✕</span>Sua empresa cresceu, mas os processos continuam desorganizados.</li>
+            </ul>
+            <p class="reveal mt-5 text-sm font-semibold text-brand-600">É exatamente aí que a gente entra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DIFERENCIAL ================= -->
+    <section class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">O diferencial</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            Você não contrata um serviço. Contrata uma estrutura.
+          </h2>
+          <p class="reveal mt-5 text-base leading-relaxed text-brand-800/70">
+            Em vez de contratar gestor de tráfego, social media, atendimento e ferramentas separadamente, você tem tudo isso conectado em uma única operação. Somos o seu time de crescimento.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          <div class="reveal rounded-2xl border border-brand-100 bg-brand-50/60 p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-brand-400 shadow-soft" aria-hidden="true">✕</span>
+              <h3 class="text-lg font-bold text-brand-900">Contratando separado</h3>
+            </div>
+            <ul class="mt-6 space-y-3 text-sm text-brand-800/80">
+              <li class="flex items-center gap-3 rounded-lg bg-white/70 px-4 py-3">Gestor de tráfego</li>
+              <li class="flex items-center gap-3 rounded-lg bg-white/70 px-4 py-3">Social media</li>
+              <li class="flex items-center gap-3 rounded-lg bg-white/70 px-4 py-3">Vendedor</li>
+              <li class="flex items-center gap-3 rounded-lg bg-white/70 px-4 py-3">Atendimento</li>
+              <li class="flex items-center gap-3 rounded-lg bg-white/70 px-4 py-3">Ferramentas e CRM</li>
+            </ul>
+            <p class="mt-6 text-sm font-medium text-brand-800/60">Vários custos, vários pontos de falha, ninguém conversa entre si.</p>
+          </div>
+
+          <div class="reveal relative overflow-hidden rounded-2xl border border-brand-500/20 bg-brand-950 p-8 text-white shadow-card">
+            <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-500/25 blur-3xl" aria-hidden="true"></div>
+            <div class="relative flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-500 text-white" aria-hidden="true">✓</span>
+              <h3 class="text-lg font-bold">Com a Zyra</h3>
+            </div>
+            <ul class="relative mt-6 space-y-3 text-sm">
+              <li class="flex items-start gap-3 rounded-lg bg-white/[0.06] px-4 py-3"><span class="text-brand-300" aria-hidden="true">✓</span>Um time integrado cuidando de tudo</li>
+              <li class="flex items-start gap-3 rounded-lg bg-white/[0.06] px-4 py-3"><span class="text-brand-300" aria-hidden="true">✓</span>Estratégia e execução no mesmo lugar</li>
+              <li class="flex items-start gap-3 rounded-lg bg-white/[0.06] px-4 py-3"><span class="text-brand-300" aria-hidden="true">✓</span>Marketing, atendimento e acompanhamento de leads conectados</li>
+              <li class="flex items-start gap-3 rounded-lg bg-white/[0.06] px-4 py-3"><span class="text-brand-300" aria-hidden="true">✓</span>Sistema + CRM incluso</li>
+              <li class="flex items-start gap-3 rounded-lg bg-white/[0.06] px-4 py-3"><span class="text-brand-300" aria-hidden="true">✓</span>Você aprova e acompanha</li>
+            </ul>
+            <p class="relative mt-6 text-sm font-semibold text-brand-200">Uma operação só, com um único time trabalhando pelo seu crescimento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOB MEDIDA ================= -->
+    <section class="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28">
+      <div class="grid-overlay absolute inset-0 opacity-30" aria-hidden="true"></div>
+      <div class="absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">Feito sob medida</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Nada genérico. Tudo construído para a sua realidade.
+          </h2>
+          <p class="reveal mt-5 text-base leading-relaxed text-brand-100/75">
+            Cada negócio é único. Por isso, a estratégia, a execução e o CRM são personalizados para o seu mercado, seu público e seus objetivos. Nada de receita pronta ou modelo genérico.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-3">
+          <article class="reveal rounded-2xl border border-white/10 bg-white/[0.05] p-7">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-500/20 text-brand-200" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold">Estratégia sob medida</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-100/70">Um plano desenhado a partir do seu mercado, e dos seus objetivos. Não é um pacote pronto que serve para qualquer empresa.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-white/10 bg-white/[0.05] p-7">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-500/20 text-brand-200" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold">Execução sob medida</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-100/70">Campanhas, conteúdo, atendimento e processos moldados à sua operação e à sua realidade. Feito para o seu negócio, não para um modelo padrão.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-white/10 bg-white/[0.05] p-7">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-500/20 text-brand-200" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold">CRM sob medida</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-100/70">Um Sistema + CRM personalizado para o seu processo de venda, com as etapas, os campos e as automações que o seu negócio realmente precisa.</p>
+          </article>
+        </div>
+
+        <p class="reveal mt-10 text-center text-base font-semibold text-brand-100">
+          Tudo pensado para a sua realidade. <span class="text-brand-400">Nada genérico.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA / CICLO ================= -->
+    <section id="como-funciona" class="bg-brand-50 py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Como funciona</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            Um ciclo que se repete e melhora a cada mês.
+          </h2>
+          <p class="reveal mt-5 text-base leading-relaxed text-brand-800/70">
+            Você aprova. A gente executa e otimiza. No fim do mês, você vê o resultado, e tudo retroalimenta o próximo ciclo.
+          </p>
+        </div>
+
+        <ol class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <li class="reveal rounded-2xl border border-brand-100 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <span class="step-num grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-sm font-bold text-white">01</span>
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600">Início</span>
+            </div>
+            <h3 class="mt-4 font-bold text-brand-900">Diagnóstico</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Entendemos o seu negócio, o mercado, os clientes e as oportunidades.</p>
+          </li>
+          <li class="reveal rounded-2xl border border-brand-100 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <span class="step-num grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-sm font-bold text-white">02</span>
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600">Mensal</span>
+            </div>
+            <h3 class="mt-4 font-bold text-brand-900">Estratégia, metas e plano de ação</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Montamos a estratégia, as metas e o plano de ação do mês.</p>
+          </li>
+          <li class="reveal rounded-2xl border border-brand-100 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <span class="step-num grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-sm font-bold text-white">03</span>
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600">Você aprova</span>
+            </div>
+            <h3 class="mt-4 font-bold text-brand-900">Aprovação</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Enviamos o plano para a sua aprovação. Nada é executado sem o seu ok.</p>
+          </li>
+          <li class="reveal rounded-2xl border border-brand-100 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <span class="step-num grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-sm font-bold text-white">04</span>
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600">A cada 15 dias</span>
+            </div>
+            <h3 class="mt-4 font-bold text-brand-900">Otimização</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Ajustamos campanhas e ações no meio do caminho para não perder tempo.</p>
+          </li>
+          <li class="reveal rounded-2xl border border-brand-100 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <span class="step-num grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-sm font-bold text-white">05</span>
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600">Fim do mês</span>
+            </div>
+            <h3 class="mt-4 font-bold text-brand-900">Relatório de resultados</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Você recebe o relatório com o resultado alcançado no mês.</p>
+          </li>
+          <li class="reveal rounded-2xl border border-brand-100 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <span class="step-num grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-sm font-bold text-white">06</span>
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600">Retroalimenta</span>
+            </div>
+            <h3 class="mt-4 font-bold text-brand-900">Próximo ciclo</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Otimizamos e melhoramos. Cada ciclo alimenta o próximo.</p>
+          </li>
+        </ol>
+
+        <p class="reveal mt-10 text-center text-base font-semibold text-brand-700">
+          ↻ Cada ciclo retroalimenta o próximo. Quanto mais tempo juntos, melhor a operação fica.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="servicos" class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">O que está incluso</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            Tudo o que sua empresa precisa para crescer. Em um só lugar.
+          </h2>
+          <p class="reveal mt-5 text-base text-brand-800/70">
+            Você não precisa contratar cinco fornecedores diferentes para cuidar de cada parte da sua operação. A Zyra conecta diferentes áreas em uma estratégia única.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Estratégia</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Direcionamento para transformar objetivos em ações.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Tráfego pago</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Campanhas para alcançar as pessoas certas, no momento certo.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H7l-3 3z"/><path d="M8 9h8M8 12h5"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Marketing</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Conteúdo, posicionamento e presença digital.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Vendas</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Processos para organizar e desenvolver sua operação comercial.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 01-4 4H7l-4 3V7a4 4 0 014-4h10a4 4 0 014 4z"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Atendimento</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Mais organização e cuidado em cada contato com seus clientes.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Automação</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Menos tarefas manuais. Mais eficiência.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">Tecnologia</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Sistemas, integrações e soluções personalizadas.</p>
+          </article>
+          <article class="reveal group rounded-2xl border border-brand-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-card">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-500 group-hover:text-white" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold text-brand-900">CRM</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-800/70">Mais controle sobre leads, oportunidades e clientes.</p>
+          </article>
+        </div>
+        <p class="reveal mt-8 text-center text-sm font-semibold text-brand-600">Tudo conectado. Tudo pensado para o seu negócio.</p>
+      </div>
+    </section>
+
+    <!-- ================= BÔNUS CRM ================= -->
+    <section class="bg-brand-50 py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Bônus incluso</p>
+            <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+              Seu negócio também ganha estrutura.
+            </h2>
+            <p class="reveal mt-5 text-base leading-relaxed text-brand-800/75">
+              Na contratação de qualquer serviço, você recebe um <strong class="font-semibold text-brand-900">Sistema + CRM personalizado</strong>, feito sob medida para o seu negócio, para você saber exatamente quem entrou em contato, em que etapa está e o que precisa ser feito para não perder uma oportunidade. Nada de ferramenta genérica.
+            </p>
+            <ul class="reveal mt-8 space-y-3">
+              <li class="flex items-start gap-3 text-sm text-brand-800"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-500 text-[11px] text-white" aria-hidden="true">✓</span>Cadastrar clientes e contatos</li>
+              <li class="flex items-start gap-3 text-sm text-brand-800"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-500 text-[11px] text-white" aria-hidden="true">✓</span>Acompanhar leads e oportunidades</li>
+              <li class="flex items-start gap-3 text-sm text-brand-800"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-500 text-[11px] text-white" aria-hidden="true">✓</span>Controlar atendimentos e etapas de venda</li>
+              <li class="flex items-start gap-3 text-sm text-brand-800"><span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-500 text-[11px] text-white" aria-hidden="true">✓</span>Centralizar as informações da operação</li>
+            </ul>
+            <a href="#contato" class="reveal mt-9 inline-flex items-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
+              Quero conhecer
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <!-- Mock do CRM -->
+          <div class="reveal">
+            <div class="rounded-2xl border border-brand-100 bg-white p-5 shadow-card">
+              <div class="flex items-center justify-between border-b border-brand-100 pb-4">
+                <p class="text-sm font-bold text-brand-900">Painel · Oportunidades</p>
+                <span class="rounded-full bg-brand-50 px-2.5 py-1 text-[11px] font-semibold text-brand-600">CRM Zyra</span>
+              </div>
+              <div class="mt-4 grid grid-cols-3 gap-3">
+                <div class="rounded-xl bg-brand-50 p-3">
+                  <p class="text-[11px] font-semibold uppercase tracking-wide text-brand-500">Novo</p>
+                  <p class="mt-1 text-xl font-extrabold text-brand-900">12</p>
+                </div>
+                <div class="rounded-xl bg-brand-50 p-3">
+                  <p class="text-[11px] font-semibold uppercase tracking-wide text-brand-500">Em negociação</p>
+                  <p class="mt-1 text-xl font-extrabold text-brand-900">7</p>
+                </div>
+                <div class="rounded-xl bg-brand-50 p-3">
+                  <p class="text-[11px] font-semibold uppercase tracking-wide text-brand-500">Fechado</p>
+                  <p class="mt-1 text-xl font-extrabold text-brand-900">5</p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center justify-between rounded-xl border border-brand-100 px-4 py-3">
+                  <div><p class="text-sm font-semibold text-brand-900">Ana Souza</p><p class="text-[11px] text-brand-800/60">Instagram · Orçamento</p></div>
+                  <span class="rounded-full bg-brand-500/10 px-2.5 py-1 text-[11px] font-semibold text-brand-600">Novo</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl border border-brand-100 px-4 py-3">
+                  <div><p class="text-sm font-semibold text-brand-900">Clínica Vitta</p><p class="text-[11px] text-brand-800/60">Proposta enviada</p></div>
+                  <span class="rounded-full bg-amber-500/10 px-2.5 py-1 text-[11px] font-semibold text-amber-600">Negociação</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl border border-brand-100 px-4 py-3">
+                  <div><p class="text-sm font-semibold text-brand-900">Óptica Prime</p><p class="text-[11px] text-brand-800/60">Contrato ativo</p></div>
+                  <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-600">Fechado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUEM SOMOS + PROPÓSITO ================= -->
+    <section class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
+          <!-- Foto do time em destaque -->
+          <div class="reveal relative order-2 lg:order-1">
+            <div class="glow-blob -inset-6 bg-brand-300/40" aria-hidden="true"></div>
+            <figure class="relative overflow-hidden rounded-2xl border border-brand-100 shadow-card">
+              <img src="assets/img/team-meeting.png" width="1672" height="940" loading="lazy" decoding="async"
+                   alt="Time da Zyra reunido ao redor de um notebook, analisando resultados junto ao cliente"
+                   class="h-72 w-full object-cover sm:h-80 lg:h-[26rem]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/10 to-transparent" aria-hidden="true"></div>
+              <figcaption class="absolute inset-x-0 bottom-0 p-6 text-sm font-semibold text-white">
+                Gente de verdade cuidando do seu crescimento.
+              </figcaption>
+            </figure>
+            <div class="float-chip--light float-chip -right-3 top-8 hidden sm:block">
+              <p class="text-[10px] font-semibold uppercase tracking-wide text-brand-500">Time integrado</p>
+              <p class="text-sm font-extrabold leading-none text-brand-900">4 áreas · 1 operação</p>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Quem somos</p>
+            <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+              Gente de verdade cuidando do seu crescimento.
+            </h2>
+            <p class="reveal mt-5 text-base leading-relaxed text-brand-800/75">
+              Somos uma operação de crescimento criada para ajudar empresas a estruturar marketing, vendas e atendimento sem precisar montar uma equipe inteira internamente. Não é uma plataforma automática: é um time trabalhando pelo seu negócio.
+            </p>
+            <div class="reveal mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="flex items-center gap-3 rounded-xl border border-brand-100 bg-brand-50/60 p-4">
+                <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-500 text-sm font-bold text-white">ZY</span>
+                <div><p class="text-sm font-semibold text-brand-900">Time de Estratégia</p><p class="text-xs text-brand-800/60">Planejamento e direção</p></div>
+              </div>
+              <div class="flex items-center gap-3 rounded-xl border border-brand-100 bg-brand-50/60 p-4">
+                <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-500 text-sm font-bold text-white">TR</span>
+                <div><p class="text-sm font-semibold text-brand-900">Time de Tráfego</p><p class="text-xs text-brand-800/60">Campanhas e performance</p></div>
+              </div>
+              <div class="flex items-center gap-3 rounded-xl border border-brand-100 bg-brand-50/60 p-4">
+                <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-500 text-sm font-bold text-white">AT</span>
+                <div><p class="text-sm font-semibold text-brand-900">Time de Atendimento</p><p class="text-xs text-brand-800/60">Leads e relacionamento</p></div>
+              </div>
+              <div class="flex items-center gap-3 rounded-xl border border-brand-100 bg-brand-50/60 p-4">
+                <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-500 text-sm font-bold text-white">OP</span>
+                <div><p class="text-sm font-semibold text-brand-900">Time de Operação</p><p class="text-xs text-brand-800/60">Processos e CRM</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal relative mt-20 overflow-hidden rounded-3xl border border-white/10 bg-brand-950 p-8 text-white sm:p-12">
+          <div class="glow-blob -right-10 -top-16 h-56 w-56 bg-brand-500/25" aria-hidden="true"></div>
+          <div class="relative grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
+            <div class="lg:col-span-7">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">Nosso propósito</p>
+              <h3 class="mt-4 text-2xl font-extrabold tracking-tight sm:text-3xl">A gente se importa com o negócio do cliente.</h3>
+              <p class="mt-5 max-w-xl text-base leading-relaxed text-brand-100/75">
+                Nosso propósito é ajudar empresas a crescer de forma estruturada e gerar valor real. Antes de pensar em campanha, ferramenta ou estratégia, queremos entender:
+              </p>
+              <ul class="mt-7 flex flex-wrap gap-2.5">
+                <li class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-brand-100"><span class="grid h-4 w-4 place-items-center rounded-full bg-brand-500 text-[10px] text-white" aria-hidden="true">✓</span>Seu negócio</li>
+                <li class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-brand-100"><span class="grid h-4 w-4 place-items-center rounded-full bg-brand-500 text-[10px] text-white" aria-hidden="true">✓</span>Seus clientes</li>
+                <li class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-brand-100"><span class="grid h-4 w-4 place-items-center rounded-full bg-brand-500 text-[10px] text-white" aria-hidden="true">✓</span>Seus desafios</li>
+                <li class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-brand-100"><span class="grid h-4 w-4 place-items-center rounded-full bg-brand-500 text-[10px] text-white" aria-hidden="true">✓</span>Seus objetivos</li>
+                <li class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-brand-100"><span class="grid h-4 w-4 place-items-center rounded-full bg-brand-500 text-[10px] text-white" aria-hidden="true">✓</span>Suas oportunidades</li>
+              </ul>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="h-full rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-7">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="text-brand-400/70" aria-hidden="true"><path d="M7.5 6C5 6 3 8 3 10.5S5 15 7.5 15c.2 0 .4 0 .6-.05C7.5 16.6 6 17.7 4.2 18l.6 1.8C7.9 19 10.5 16.4 10.5 12.5V10.5C10.5 8 8.5 6 7.5 6zm9 0C14 6 12 8 12 10.5S14 15 16.5 15c.2 0 .4 0 .6-.05C16.5 16.6 15 17.7 13.2 18l.6 1.8C16.9 19 19.5 16.4 19.5 12.5V10.5C19.5 8 17.5 6 16.5 6z"/></svg>
+                <p class="mt-4 text-base leading-relaxed text-white/90">
+                  Trabalhamos com interesse genuíno, cuidado, atenção aos detalhes, empatia e proatividade. Porque, para nós, cada cliente é mais do que um contrato. É uma empresa que confiou na gente para ajudar a construir o próximo capítulo.
+                </p>
+                <a href="#contato" class="mt-7 inline-flex items-center gap-2 rounded-xl bg-brand-500 px-5 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
+                  Conheça nosso propósito
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESULTADOS ================= -->
+    <section class="bg-brand-50 py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Resultados</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            O que muda quando estratégia e execução andam juntas.
+          </h2>
+          <p class="reveal mt-5 text-base text-brand-800/70">Exemplos de transformação de negócios que pararam de fazer tudo sozinhos.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <article class="reveal flex flex-col rounded-2xl border border-brand-100 bg-white p-7 shadow-soft">
+            <span class="w-fit rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600">Clínica de estética</span>
+            <h3 class="mt-4 text-lg font-bold text-brand-900">Do zero em anúncios a um fluxo previsível de contatos</h3>
+            <dl class="mt-5 space-y-3 text-sm">
+              <div><dt class="font-semibold text-brand-500">Problema</dt><dd class="text-brand-800/70">Poucos leads e atendimento desorganizado.</dd></div>
+              <div><dt class="font-semibold text-brand-500">O que fizemos</dt><dd class="text-brand-800/70">Estratégia + tráfego pago + CRM + estrutura de atendimento.</dd></div>
+              <div><dt class="font-semibold text-brand-500">Resultado</dt><dd class="text-brand-800/70">Aumento consistente de oportunidades e mais controle da operação.</dd></div>
+            </dl>
+          </article>
+          <article class="reveal flex flex-col rounded-2xl border border-brand-100 bg-white p-7 shadow-soft">
+            <span class="w-fit rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600">Autopeças</span>
+            <h3 class="mt-4 text-lg font-bold text-brand-900">Atendimento organizado e vendas sob controle</h3>
+            <dl class="mt-5 space-y-3 text-sm">
+              <div><dt class="font-semibold text-brand-500">Problema</dt><dd class="text-brand-800/70">Leads se perdiam e as vendas oscilavam.</dd></div>
+              <div><dt class="font-semibold text-brand-500">O que fizemos</dt><dd class="text-brand-800/70">CRM personalizado + automação + processo comercial.</dd></div>
+              <div><dt class="font-semibold text-brand-500">Resultado</dt><dd class="text-brand-800/70">Nenhuma oportunidade esquecida e processo mais previsível.</dd></div>
+            </dl>
+          </article>
+          <article class="reveal flex flex-col rounded-2xl border border-brand-100 bg-white p-7 shadow-soft">
+            <span class="w-fit rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600">E-commerce de moda</span>
+            <h3 class="mt-4 text-lg font-bold text-brand-900">Um time inteiro no lugar de tarefas soltas</h3>
+            <dl class="mt-5 space-y-3 text-sm">
+              <div><dt class="font-semibold text-brand-500">Problema</dt><dd class="text-brand-800/70">Contratou pensando em posts e faltava direção.</dd></div>
+              <div><dt class="font-semibold text-brand-500">O que fizemos</dt><dd class="text-brand-800/70">Estratégia, conteúdo, tráfego e acompanhamento de resultados.</dd></div>
+              <div><dt class="font-semibold text-brand-500">Resultado</dt><dd class="text-brand-800/70">Operação de marketing e vendas conectada e sem fidelidade.</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-3">
+          <figure class="reveal rounded-2xl border border-brand-100 bg-white p-7 shadow-soft">
+            <div class="text-amber-400" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote class="mt-4 text-sm leading-relaxed text-brand-800/80">“Em 60 dias saímos do zero em anúncios para um fluxo previsível de contatos. Eu só aprovo e acompanho, a execução é toda deles.”</blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">MR</span>
+              <div><p class="text-sm font-semibold text-brand-900">Marina Rocha</p><p class="text-xs text-brand-800/60">Clínica de estética · Goiânia/GO</p></div>
+            </figcaption>
+          </figure>
+          <figure class="reveal rounded-2xl border border-brand-100 bg-white p-7 shadow-soft">
+            <div class="text-amber-400" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote class="mt-4 text-sm leading-relaxed text-brand-800/80">“Organizaram nosso atendimento e o CRM. Hoje não perdemos mais nenhuma oportunidade e minhas vendas ficaram muito mais controladas.”</blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">CS</span>
+              <div><p class="text-sm font-semibold text-brand-900">Carlos Silva</p><p class="text-xs text-brand-800/60">Autopeças · Aparecida de Goiânia/GO</p></div>
+            </figcaption>
+          </figure>
+          <figure class="reveal rounded-2xl border border-brand-100 bg-white p-7 shadow-soft">
+            <div class="text-amber-400" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote class="mt-4 text-sm leading-relaxed text-brand-800/80">“Contratei pensando em posts e recebi um time inteiro de marketing e vendas. O melhor: sem fidelidade e com resultado aparecendo rápido.”</blockquote>
+            <figcaption class="mt-5 flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">JA</span>
+              <div><p class="text-sm font-semibold text-brand-900">Juliana Alves</p><p class="text-xs text-brand-800/60">E-commerce de moda · Anápolis/GO</p></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PLANOS ================= -->
+    <section id="planos" class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Planos</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            Comece pequeno. Veja acontecer. Cresça com a gente.
+          </h2>
+          <p class="reveal mt-5 text-base text-brand-800/70">Você não precisa investir alto para começar. E sem fidelidade.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <article class="reveal flex flex-col rounded-2xl border border-brand-100 bg-white p-8 shadow-soft">
+            <h3 class="text-lg font-bold text-brand-900">Essencial</h3>
+            <p class="mt-1 text-sm text-brand-800/70">Para empresas que precisam começar.</p>
+            <p class="mt-6 text-4xl font-extrabold tracking-tight text-brand-900">R$ 550<span class="text-base font-semibold text-brand-800/60">/mês</span></p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-brand-800">
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Estratégia inicial</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Gestão de tráfego pago</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Presença digital</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Sistema + CRM incluso</li>
+            </ul>
+            <a href="#contato" class="mt-8 inline-flex items-center justify-center rounded-xl border border-brand-200 bg-white px-6 py-3.5 text-sm font-semibold text-brand-900 transition hover:border-brand-400 hover:bg-brand-50">Quero este plano</a>
+          </article>
+
+          <article class="reveal relative flex flex-col rounded-2xl border-2 border-brand-500 bg-brand-950 p-8 text-white shadow-card lg:-translate-y-3">
+            <span class="absolute -top-3 left-8 rounded-full bg-brand-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-glow">Mais escolhido</span>
+            <h3 class="text-lg font-bold">Crescimento</h3>
+            <p class="mt-1 text-sm text-brand-100/70">Para empresas que querem acelerar aquisição e vendas.</p>
+            <p class="mt-6 text-3xl font-extrabold tracking-tight">Sob consulta</p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-brand-100/90">
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-300" aria-hidden="true">✓</span>Tudo do Essencial</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-300" aria-hidden="true">✓</span>Atendimento e acompanhamento de leads</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-300" aria-hidden="true">✓</span>Estrutura do processo comercial</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-300" aria-hidden="true">✓</span>Automação de processos</li>
+            </ul>
+            <a href="#contato" class="mt-8 inline-flex items-center justify-center rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">Quero este plano</a>
+          </article>
+
+          <article class="reveal flex flex-col rounded-2xl border border-brand-100 bg-white p-8 shadow-soft">
+            <h3 class="text-lg font-bold text-brand-900">Performance</h3>
+            <p class="mt-1 text-sm text-brand-800/70">Para empresas que querem uma operação mais completa.</p>
+            <p class="mt-6 text-3xl font-extrabold tracking-tight text-brand-900">Sob consulta</p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-brand-800">
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Tudo do Crescimento</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Acompanhamento estratégico próximo</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Otimização contínua</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-brand-500" aria-hidden="true">✓</span>Prioridade na operação</li>
+            </ul>
+            <a href="#contato" class="mt-8 inline-flex items-center justify-center rounded-xl border border-brand-200 bg-white px-6 py-3.5 text-sm font-semibold text-brand-900 transition hover:border-brand-400 hover:bg-brand-50">Quero este plano</a>
+          </article>
+        </div>
+
+        <p class="reveal mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-brand-800/60">
+          A Zyra cuida do marketing, do tráfego e do acompanhamento dos leads. O fechamento da venda é feito pelo seu time comercial, e ajudamos a estruturar esse processo.
+        </p>
+        <p class="reveal mt-4 text-center text-sm font-semibold text-brand-600">
+          Não sabe qual plano escolher?
+          <a href="https://wa.me/5562920023208" target="_blank" rel="noopener" class="underline decoration-brand-300 underline-offset-4 hover:text-brand-500">Fale com nosso time.</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= PARCEIROS ================= -->
+    <section id="parceiro" class="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28">
+      <div class="grid-overlay absolute inset-0 opacity-40" aria-hidden="true"></div>
+      <div class="absolute -left-20 top-10 h-64 w-64 rounded-full bg-brand-500/20 blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">Seja nosso parceiro</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Indique. Conecte. Ganhe.</h2>
+          <p class="reveal mt-5 text-base leading-relaxed text-brand-100/75">
+            Você conhece empresas que precisam vender mais, melhorar o marketing ou organizar a operação? Indique para a gente e transforme suas conexões em benefícios.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          <div class="reveal rounded-2xl border border-white/10 bg-white/[0.05] p-8">
+            <h3 class="text-lg font-bold">Comissão</h3>
+            <p class="mt-3 text-sm leading-relaxed text-brand-100/75">Receba uma comissão pelas empresas indicadas que se tornarem clientes.</p>
+            <p class="mt-4 rounded-xl bg-brand-500/15 px-4 py-3 text-sm font-semibold text-brand-200">Indique → Cliente contrata → Você recebe.</p>
+            <p class="mt-4 text-sm text-brand-100/70">Ideal para quem tem uma boa rede de contatos e quer transformar indicações em uma nova fonte de renda.</p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-white/[0.05] p-8">
+            <h3 class="text-lg font-bold">Desconto nos nossos serviços</h3>
+            <p class="mt-3 text-sm leading-relaxed text-brand-100/75">Prefere economizar no seu próprio negócio? Suas indicações podem gerar descontos nos serviços contratados por você, conforme as regras do programa.</p>
+          </div>
+        </div>
+
+        <div class="mt-12">
+          <h3 class="reveal text-center text-sm font-semibold uppercase tracking-wider text-brand-300">Como funciona?</h3>
+          <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="reveal rounded-2xl border border-white/10 bg-white/[0.04] p-6"><span class="step-num text-xs font-bold text-brand-300">01</span><h4 class="mt-3 font-bold">Você indica</h4><p class="mt-2 text-sm text-brand-100/70">Apresente nossa solução para uma empresa que possa se beneficiar dos nossos serviços.</p></li>
+            <li class="reveal rounded-2xl border border-white/10 bg-white/[0.04] p-6"><span class="step-num text-xs font-bold text-brand-300">02</span><h4 class="mt-3 font-bold">A gente assume</h4><p class="mt-2 text-sm text-brand-100/70">Nossa equipe entra em contato, entende o negócio e apresenta a solução adequada.</p></li>
+            <li class="reveal rounded-2xl border border-white/10 bg-white/[0.04] p-6"><span class="step-num text-xs font-bold text-brand-300">03</span><h4 class="mt-3 font-bold">O cliente contrata</h4><p class="mt-2 text-sm text-brand-100/70">Se a indicação virar cliente, você recebe seu benefício.</p></li>
+            <li class="reveal rounded-2xl border border-white/10 bg-white/[0.04] p-6"><span class="step-num text-xs font-bold text-brand-300">04</span><h4 class="mt-3 font-bold">Você ganha</h4><p class="mt-2 text-sm text-brand-100/70">Escolha entre comissão ou desconto nos nossos serviços, conforme as condições do programa.</p></li>
+          </ol>
+        </div>
+
+        <div class="reveal mt-12 rounded-2xl border border-white/10 bg-white/[0.05] p-8">
+          <h3 class="text-lg font-bold">Quem pode ser parceiro?</h3>
+          <p class="mt-3 text-sm text-brand-100/75">Qualquer pessoa ou empresa que tenha uma boa rede de contatos e queira indicar nossos serviços. Pode ser:</p>
+          <ul class="mt-5 flex flex-wrap gap-2">
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Empresários</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Consultores</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Autônomos</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Contadores</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Agências</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Freelancers</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Especialistas</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Influenciadores</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Comerciais</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-100">Parceiros estratégicos</li>
+          </ul>
+          <p class="mt-6 text-sm font-semibold text-brand-200">Você não precisa vender. Você indica. Nosso time apresenta, negocia e conduz a contratação.</p>
+          <div class="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-lg font-bold">Você faz a conexão. A gente faz o resto.</p>
+            <a href="https://wa.me/5562920023208?text=Ol%C3%A1%2C%20quero%20indicar%20uma%20empresa%20para%20a%20Zyra." target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
+              Ganhe com suas indicações
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <p class="mt-4 text-xs text-brand-100/60">Consulte as condições, regras e critérios do programa. <a href="#" class="underline underline-offset-2 hover:text-brand-200">Ver regulamento.</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="duvidas" class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Dúvidas frequentes</p>
+          <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">Tirando o medo de contratar.</h2>
+        </div>
+
+        <div data-accordion data-single class="reveal mx-auto mt-12 max-w-3xl space-y-3">
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-1" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>Preciso ter uma empresa grande?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-1" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Não. Atendemos empresas em diferentes momentos e estágios de crescimento.</p></div></div>
+          </div>
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-2" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>Existe fidelidade?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-2" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Não. Você começa sem contrato de fidelidade e continua porque está vendo valor no trabalho.</p></div></div>
+          </div>
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-3" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>A partir de quanto posso começar?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-3" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Planos a partir de R$ 550/mês, com um time completo e sem fidelidade.</p></div></div>
+          </div>
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-4" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>Vocês fazem tudo ou eu preciso executar?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-4" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Nossa proposta é cuidar da estratégia e da execução. Você aprova e acompanha o que for necessário.</p></div></div>
+          </div>
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-5" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>Vocês trabalham com tráfego pago e conteúdo?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-5" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Sim. Cuidamos da estratégia, das campanhas de tráfego pago e da presença digital do seu negócio.</p></div></div>
+          </div>
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-6" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>Vocês vendem pelo meu negócio?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-6" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Não. Nós cuidamos do marketing, do tráfego e do acompanhamento dos leads. O fechamento da venda é feito pelo seu time comercial, e ajudamos a estruturar esse processo para vender com mais previsibilidade.</p></div></div>
+          </div>
+          <div class="rounded-2xl border border-brand-100 bg-white shadow-soft">
+            <h3><button type="button" data-acc-trigger aria-expanded="false" aria-controls="faq-7" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-brand-900"><span>O CRM está incluso?</span><span class="faq-icon text-xl font-light text-brand-400" aria-hidden="true">+</span></button></h3>
+            <div id="faq-7" class="faq-panel" data-open="false"><div><p class="px-6 pb-6 text-sm leading-relaxed text-brand-800/75">Sim. Na contratação de qualquer serviço você recebe um Sistema + CRM personalizado como bônus.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section id="contato" class="bg-brand-50 py-20 sm:py-28">
+      <div class="mx-auto max-w-content px-5 sm:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-brand-500">Fale com a gente</p>
+            <h2 class="reveal mt-4 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+              Quer ver na prática o que podemos fazer pelo seu negócio?
+            </h2>
+            <p class="reveal mt-5 text-base leading-relaxed text-brand-800/75">
+              Responda 4 perguntas rápidas e a gente já começa a conversa entendendo qual solução faz mais sentido para a sua empresa.
+            </p>
+            <ul class="reveal mt-8 space-y-3">
+              <li class="flex items-center gap-3 text-sm font-medium text-brand-800"><span class="grid h-6 w-6 place-items-center rounded-full bg-brand-500 text-xs text-white" aria-hidden="true">✓</span>Resposta rápida no WhatsApp</li>
+              <li class="flex items-center gap-3 text-sm font-medium text-brand-800"><span class="grid h-6 w-6 place-items-center rounded-full bg-brand-500 text-xs text-white" aria-hidden="true">✓</span>Sem compromisso e sem fidelidade</li>
+              <li class="flex items-center gap-3 text-sm font-medium text-brand-800"><span class="grid h-6 w-6 place-items-center rounded-full bg-brand-500 text-xs text-white" aria-hidden="true">✓</span>Diagnóstico inicial gratuito</li>
+            </ul>
+            <p class="reveal mt-8 text-sm text-brand-800/70">
+              Ou fale direto:
+              <a href="https://wa.me/5562920023208" target="_blank" rel="noopener" class="font-semibold text-brand-600 underline decoration-brand-300 underline-offset-4 hover:text-brand-500">+55 62 92002-3208</a>
+            </p>
+          </div>
+
+          <div class="reveal">
+            <form id="form-contato" class="rounded-2xl border border-brand-100 bg-white p-6 shadow-card sm:p-8">
+              <div class="space-y-5">
+                <div>
+                  <label for="c-nome" class="block text-sm font-semibold text-brand-900">Seu nome</label>
+                  <input id="c-nome" name="nome" type="text" required autocomplete="name" placeholder="Como podemos te chamar?"
+                         class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                </div>
+                <div>
+                  <label for="c-negocio" class="block text-sm font-semibold text-brand-900">Qual é o seu negócio?</label>
+                  <input id="c-negocio" name="negocio" type="text" required placeholder="Ex.: Clínica de estética"
+                         class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                </div>
+                <div>
+                  <label for="c-objetivo" class="block text-sm font-semibold text-brand-900">Qual seu principal objetivo?</label>
+                  <select id="c-objetivo" name="objetivo" required
+                          class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 focus:border-brand-400 focus:bg-white focus:outline-none">
+                    <option value="">Selecione uma opção</option>
+                    <option>Atrair mais clientes</option>
+                    <option>Aumentar vendas</option>
+                    <option>Melhorar o marketing</option>
+                    <option>Organizar o atendimento</option>
+                    <option>Automatizar processos</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="c-whats" class="block text-sm font-semibold text-brand-900">Seu WhatsApp <span class="font-normal text-brand-800/50">(opcional)</span></label>
+                  <input id="c-whats" name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 00000-0000"
+                         class="mt-2 w-full rounded-xl border border-brand-200 bg-brand-50/40 px-4 py-3 text-sm text-brand-900 placeholder:text-brand-800/40 focus:border-brand-400 focus:bg-white focus:outline-none" />
+                </div>
+              </div>
+              <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
+                Falar com um especialista
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="mt-3 text-center text-xs text-brand-800/50">Ao enviar, abriremos o WhatsApp com sua mensagem pronta.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28">
+      <img src="assets/img/hero-dashboard.png" width="1672" height="940" loading="lazy" alt="" aria-hidden="true"
+           class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]" />
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-950/80 via-brand-950/85 to-brand-950" aria-hidden="true"></div>
+      <div class="grid-overlay absolute inset-0 opacity-40" aria-hidden="true"></div>
+      <div class="absolute left-1/2 top-1/2 h-72 w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/20 blur-[120px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 text-center sm:px-8">
+        <h2 class="reveal mx-auto max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">Pare de tentar fazer tudo sozinho.</h2>
+        <p class="reveal mx-auto mt-5 max-w-xl text-base text-brand-100/75">Tenha um time executando por você. Você só aprova e vê os resultados. A partir de R$ 550/mês, sem fidelidade.</p>
+        <div class="reveal mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="#contato" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-600">
+            Quero começar agora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#planos" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">Ver os planos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/10 bg-brand-950 py-14 text-brand-100/70">
+    <div class="mx-auto max-w-content px-5 sm:px-8">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Zyra, página inicial">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 text-lg font-extrabold text-white">Z</span>
+            <span class="text-lg font-extrabold tracking-tight text-white">Zyra</span>
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed">Seu time de crescimento sob demanda: estratégia e execução para atrair clientes, vender mais e organizar seu marketing.</p>
+        </div>
+        <nav class="lg:col-span-4" aria-label="Rodapé">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-white">Navegação</h2>
+          <ul class="mt-4 grid grid-cols-2 gap-y-3 text-sm">
+            <li><a href="#servicos" class="transition hover:text-white">Serviços</a></li>
+            <li><a href="#como-funciona" class="transition hover:text-white">Como funciona</a></li>
+            <li><a href="#planos" class="transition hover:text-white">Planos</a></li>
+            <li><a href="#parceiro" class="transition hover:text-white">Seja Parceiro</a></li>
+            <li><a href="carreiras.html" class="transition hover:text-white">Trabalhe Conosco</a></li>
+            <li><a href="#duvidas" class="transition hover:text-white">Dúvidas</a></li>
+            <li><a href="#" class="transition hover:text-white">Política de Privacidade</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-white">Contato</h2>
+          <a href="https://wa.me/5562920023208" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-300 transition hover:text-brand-200">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.5.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+            +55 62 92002-3208
+          </a>
+        </div>
+      </div>
+      <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row">
+        <p>© <span data-year>2026</span> Zyra. Todos os direitos reservados.</p>
+        <a href="#" class="transition hover:text-white">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/5562920023208" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.5.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+    <span class="wa-float__label">Falar no WhatsApp</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
