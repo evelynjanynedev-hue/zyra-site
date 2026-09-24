@@ -94,6 +94,14 @@ p {
   color: #0F2350;
   border-color: rgba(15, 35, 80, 0.15);
 }
+/* Celular: backdrop-filter com blur é pesado e trava o scroll. Usa fundo sólido. */
+@media (max-width: 767px) {
+  .site-header.is-scrolled {
+    background-color: #fff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
 
 /* Logo da marca: versão clara sobre o hero escuro, escura sobre o header branco */
 .site-header .brand-logo .logo-dark {
@@ -106,14 +114,18 @@ p {
   display: block;
 }
 
-/* Reveal on scroll */
+/* Reveal on scroll (o conteúdo só fica oculto quando o JS está ativo;
+   sem JS ou se o JS falhar, tudo aparece normalmente) */
 .reveal {
+  opacity: 1;
+}
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
@@ -246,7 +258,8 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
-  .reveal {
+  .reveal,
+  .js .reveal {
     opacity: 1;
     transform: none;
   }
