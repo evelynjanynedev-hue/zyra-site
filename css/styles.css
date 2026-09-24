@@ -129,6 +129,14 @@ p {
   opacity: 1;
   transform: none;
 }
+/* Celular: conteúdo aparece na hora, sem animação elemento por elemento */
+@media (max-width: 767px) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* Textura sutil de grade para fundos escuros */
 .grid-overlay {
