@@ -38,6 +38,8 @@
   /* ---------- Reveal on scroll ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
+    /* Marca que o reveal foi inicializado; o failsafe no HTML usa isso */
+    window.__zyraRevealInit = true;
     if (reduceMotion || !('IntersectionObserver' in window)) {
       reveals.forEach((el) => el.classList.add('is-visible'));
     } else {

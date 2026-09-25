@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    /* Failsafe: se o main.js não inicializar o reveal, mostra tudo para nunca ficar tela em branco */
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        if (!window.__zyraRevealInit) {
+          document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        }
+      }, 1500);
+    });
+  </script>
   <title>Carreiras | Trabalhe com a gente | Zyra</title>
   <meta name="description" content="Estamos construindo um time para fazer negócios crescerem. Vagas 100% remotas em marketing, vendas, tecnologia, recrutamento e customer success. Contratação PJ." />
   <meta name="theme-color" content="#060F24" />
@@ -11,8 +21,8 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta property="og:title" content="Carreiras | Trabalhe com a gente | Zyra" />
   <meta property="og:description" content="Vagas 100% remotas. Marketing, vendas, tecnologia e mais. Faça parte do crescimento." />
-  <link rel="stylesheet" href="css/tailwind.css?v=5" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/tailwind.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
   <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body class="bg-white font-sans text-brand-900 antialiased">
@@ -63,7 +73,7 @@
       <img src="assets/img/team-meeting.webp?v=5" width="900" height="507" alt="" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]" />
       <div class="grid-overlay absolute inset-0 opacity-50" aria-hidden="true"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-brand-950/70 via-brand-950/85 to-brand-950" aria-hidden="true"></div>
-      <div class="absolute -top-24 left-1/2 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px]" aria-hidden="true"></div>
+      <div class="deco-blur absolute -top-24 left-1/2 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px]" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-content px-5 py-20 text-center sm:px-8 sm:py-28">
         <img src="assets/img/logo-zyra.webp" width="340" height="133" alt="Zyra"
              fetchpriority="high" decoding="async" class="reveal mx-auto h-12 w-auto sm:h-14" />
@@ -353,7 +363,7 @@
     <!-- ================= CTA FINAL ================= -->
     <section class="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28">
       <div class="grid-overlay absolute inset-0 opacity-40" aria-hidden="true"></div>
-      <div class="absolute left-1/2 top-1/2 h-72 w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/20 blur-[120px]" aria-hidden="true"></div>
+      <div class="deco-blur absolute left-1/2 top-1/2 h-72 w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/20 blur-[120px]" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-content px-5 text-center sm:px-8">
         <h2 class="reveal mx-auto max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">Faça parte do crescimento.</h2>
         <p class="reveal mx-auto mt-5 max-w-xl text-base text-brand-100/75">Estamos construindo uma equipe para criar, vender e executar soluções que geram crescimento para empresas. Talvez o próximo talento que procuramos seja você.</p>
@@ -388,7 +398,7 @@
             <li><a href="index.html#parceiro" class="transition hover:text-white">Seja Parceiro</a></li>
             <li><a href="carreiras.html" class="transition hover:text-white">Trabalhe Conosco</a></li>
             <li><a href="index.html#duvidas" class="transition hover:text-white">Dúvidas</a></li>
-            <li><a href="#" class="transition hover:text-white">Política de Privacidade</a></li>
+            <li><a href="privacidade.html" class="transition hover:text-white">Política de Privacidade</a></li>
           </ul>
         </nav>
         <div class="lg:col-span-3">
@@ -402,7 +412,7 @@
       <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row">
         <p>© <span data-year>2026</span> Zyra. Todos os direitos reservados.</p>
         <div class="flex items-center gap-4">
-          <a href="#" class="transition hover:text-white">Política de Privacidade</a>
+          <a href="privacidade.html" class="transition hover:text-white">Política de Privacidade</a>
           <a href="index.html" class="transition hover:text-white">Voltar ao site</a>
         </div>
       </div>
@@ -415,6 +425,6 @@
     <span class="wa-float__label">Falar no WhatsApp</span>
   </a>
 
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

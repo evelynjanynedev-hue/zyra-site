@@ -137,6 +137,22 @@ p {
   }
 }
 
+/* Celular: as manchas decorativas usam blur de até 130px em áreas enormes.
+   Isso é muito caro pro GPU do celular e trava a rolagem/primeiro desenho.
+   Trocamos o desfoque por um gradiente radial: mesmo brilho, custo quase zero. */
+@media (max-width: 767px) {
+  .deco-blur {
+    filter: none !important;
+    -webkit-filter: none !important;
+    background: radial-gradient(closest-side, rgba(46, 107, 255, 0.32), rgba(46, 107, 255, 0) 72%) !important;
+  }
+  /* backdrop-filter também é pesado no celular; os fundos já dão contraste */
+  .backdrop-blur {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
 /* Textura sutil de grade para fundos escuros */
 .grid-overlay {
   background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
