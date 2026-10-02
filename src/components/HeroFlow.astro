@@ -1,35 +1,95 @@
 ---
 const steps = [
-  { n: "01", title: "Entendemos" },
-  { n: "02", title: "Planejamos" },
-  { n: "03", title: "Você aprova" },
-  { n: "04", title: "Executamos" },
-  { n: "05", title: "Acompanhamos" },
-  { n: "06", title: "Otimizamos" },
-  { n: "07", title: "Resultado" },
+  {
+    n: "01",
+    title: "Entendemos",
+    text: "Conhecemos seu negócio, seus objetivos e os principais gargalos antes de definir o que fazer.",
+    roleLabel: "Você recebe",
+    roleText: "Um diagnóstico claro do momento atual e das principais oportunidades.",
+  },
+  {
+    n: "02",
+    title: "Planejamos",
+    text: "Transformamos o diagnóstico em prioridades, estratégia e plano para o próximo ciclo.",
+    roleLabel: "Você recebe",
+    roleText: "Clareza sobre o que vamos fazer, por quê e o que esperamos alcançar.",
+  },
+  {
+    n: "03",
+    title: "Você aprova",
+    text: "Você continua no controle. A estratégia e as decisões importantes passam pelo seu ok antes de começarmos.",
+    roleLabel: "Você faz",
+    roleText: "Aprova o plano ou pede ajustes.",
+  },
+  {
+    n: "04",
+    title: "Executamos",
+    text: "Com o plano aprovado, a Zyra coloca as ações em prática.",
+    roleLabel: "A Zyra cuida",
+    roleText: "Do operacional previsto no seu plano, sem você precisar coordenar tudo.",
+  },
+  {
+    n: "05",
+    title: "Acompanhamos",
+    text: "Monitoramos o que está acontecendo para entender o que está funcionando e onde surgiram novas oportunidades.",
+    roleLabel: "Você acompanha",
+    roleText: "Ações, resultados e próximos passos.",
+  },
+  {
+    n: "06",
+    title: "Otimizamos",
+    text: "Os resultados orientam os próximos ajustes. O que funciona continua; o que não funciona é revisado.",
+    roleLabel: "A Zyra faz",
+    roleText: "Analisa, testa e ajusta a operação a cada ciclo.",
+  },
+  {
+    n: "07",
+    title: "Resultado",
+    text: "No fim do ciclo, mostramos o que aconteceu, o que aprendemos e o que faz sentido fazer depois.",
+    roleLabel: "Você vê",
+    roleText: "Resultados, aprendizados e próximo passo.",
+  },
 ];
 const areas = ["Atrair", "Converter", "Operar", "Melhorar"];
 ---
 
 <div class="rounded-[var(--radius-3xl)] border border-line bg-surface p-6 shadow-[var(--shadow-xl)] sm:p-8">
-  <div class="flex items-center justify-between">
-    <p class="text-sm font-semibold text-ink">Como a Zyra conduz seu crescimento</p>
-    <span class="hidden rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600 sm:inline">Método</span>
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <p class="text-sm font-semibold text-ink">Como a Zyra conduz seu crescimento</p>
+      <p class="mt-1 text-sm text-muted">Clique em uma etapa para entender o que acontece.</p>
+    </div>
+    <span class="hidden shrink-0 rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold text-brand-600 sm:inline">Método</span>
   </div>
 
-  <ol class="mt-7 flex flex-wrap items-center justify-center gap-x-2 gap-y-3">
+  <div class="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-3" id="flow-steps">
     {steps.map((s, i) => (
-      <li class="flex items-center gap-2">
-        <span class="flex items-center gap-2.5 rounded-xl border border-line bg-surface px-3.5 py-2.5 shadow-[var(--shadow-xs)]">
-          <span class="text-[12px] font-semibold text-brand-600">{s.n}</span>
-          <span class="text-sm font-medium text-ink">{s.title}</span>
-        </span>
-        {i < steps.length - 1 && (
-          <span class="text-faint" aria-hidden="true">→</span>
-        )}
-      </li>
+      <span class="flex items-center gap-2">
+        <button
+          type="button"
+          class="step-btn"
+          data-step={i}
+          aria-expanded={i === 0 ? "true" : "false"}
+        >
+          <span class="step-num">{s.n}</span>
+          <span class="step-title">{s.title}</span>
+        </button>
+        {i < steps.length - 1 && <span class="text-faint" aria-hidden="true">→</span>}
+      </span>
     ))}
-  </ol>
+  </div>
+
+  <div class="mt-5 rounded-2xl border border-line bg-surface-2/50 p-5">
+    {steps.map((s, i) => (
+      <div class="step-panel" data-panel={i} hidden={i !== 0}>
+        <p class="text-sm font-semibold text-ink">{s.n} · {s.title}</p>
+        <p class="mt-2 text-sm leading-relaxed text-muted">{s.text}</p>
+        <p class="mt-3 text-sm leading-relaxed text-ink">
+          <span class="font-semibold text-brand-600">{s.roleLabel}:</span> {s.roleText}
+        </p>
+      </div>
+    ))}
+  </div>
 
   <div class="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 rounded-2xl border border-line bg-surface-2/50 px-4 py-3">
     <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">O que a Zyra cuida</span>
@@ -44,8 +104,68 @@ const areas = ["Atrair", "Converter", "Operar", "Melhorar"];
     <span class="text-sm text-muted">e o ciclo recomeça melhor a cada mês.</span>
   </div>
 
-  <div class="mt-6 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 sm:flex-row">
-    <p class="text-base font-semibold text-ink">Você acompanha. A Zyra conduz.</p>
+  <div class="mt-6 border-t border-line pt-6 text-center">
     <p class="text-sm text-muted">Um ciclo claro, do entendimento ao resultado.</p>
   </div>
 </div>
+
+<style>
+  .step-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-line);
+    background: var(--color-surface);
+    padding: 0.625rem 0.875rem;
+    box-shadow: var(--shadow-xs);
+    transition: all 0.18s ease;
+  }
+  .step-btn:hover {
+    border-color: var(--color-brand-300);
+  }
+  .step-num {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-brand-600);
+  }
+  .step-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  .step-btn.is-active {
+    border-color: var(--color-brand-500);
+    background: var(--color-brand-50);
+    box-shadow: var(--shadow-sm);
+  }
+  .step-btn.is-active .step-num {
+    color: var(--color-brand-700);
+  }
+</style>
+
+<script>
+  const buttons = Array.from(document.querySelectorAll(".step-btn"));
+  const panels = Array.from(document.querySelectorAll(".step-panel"));
+
+  function select(index) {
+    buttons.forEach((b, i) => {
+      const active = i === index;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-expanded", String(active));
+    });
+    panels.forEach((p, i) => {
+      p.hidden = i !== index;
+    });
+  }
+
+  buttons.forEach((b) => {
+    b.addEventListener("click", () => {
+      const index = Number(b.dataset.step);
+      const isOpen = b.classList.contains("is-active");
+      select(isOpen ? -1 : index);
+    });
+  });
+
+  select(0);
+</script>
