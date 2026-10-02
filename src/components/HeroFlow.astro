@@ -8,6 +8,7 @@ const steps = [
   { n: "06", title: "Otimizamos" },
   { n: "07", title: "Resultado" },
 ];
+const areas = ["Atrair", "Converter", "Operar", "Melhorar"];
 ---
 
 <div class="rounded-[var(--radius-3xl)] border border-line bg-surface p-6 shadow-[var(--shadow-xl)] sm:p-8">
@@ -30,7 +31,20 @@ const steps = [
     ))}
   </ol>
 
-  <div class="mt-8 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 sm:flex-row">
+  <div class="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 rounded-2xl border border-line bg-surface-2/50 px-4 py-3">
+    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">O que a Zyra cuida</span>
+    <span class="mx-1 hidden h-4 w-px bg-line sm:block"></span>
+    {areas.map((a, i) => (
+      <span class="flex items-center gap-2">
+        <span class="text-sm font-medium text-ink">{a}</span>
+        {i < areas.length - 1 && <span class="text-faint" aria-hidden="true">→</span>}
+      </span>
+    ))}
+    <span class="text-brand-500" aria-hidden="true">↺</span>
+    <span class="text-sm text-muted">e o ciclo recomeça melhor a cada mês.</span>
+  </div>
+
+  <div class="mt-6 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 sm:flex-row">
     <p class="text-base font-semibold text-ink">Você acompanha. A Zyra conduz.</p>
     <p class="text-sm text-muted">Um ciclo claro, do entendimento ao resultado.</p>
   </div>
