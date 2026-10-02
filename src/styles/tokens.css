@@ -52,15 +52,16 @@
   --color-brand-900: #0b1c4d;
   --color-brand-950: #070f2b;
 
-  --color-accent-300: #c7bfff;
-  --color-accent-400: #a394ff;
-  --color-accent-500: #7a5cff;
-  --color-accent-600: #635bff;
+  /* Acentos mantidos na paleta da marca: azul + neutros */
+  --color-accent-300: #bcd0ff;
+  --color-accent-400: #8fb0ff;
+  --color-accent-500: #5b85ff;
+  --color-accent-600: #2e6bff;
 
-  --color-cyan-400: #38bdf8;
-  --color-cyan-500: #0ea5e9;
-  --color-pink-400: #ff7eb6;
-  --color-pink-500: #ec4899;
+  --color-cyan-400: #8fb0ff;
+  --color-cyan-500: #5b85ff;
+  --color-pink-400: #bcd0ff;
+  --color-pink-500: #8fb0ff;
 
   /* Azul-marinho (Stripe navy) para seções escuras */
   --color-navy: #0a2540;

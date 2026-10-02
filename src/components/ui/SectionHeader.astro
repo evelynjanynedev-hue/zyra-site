@@ -1,22 +1,33 @@
 ---
 interface Props {
   eyebrow?: string;
+  title?: string;
   lead?: string;
-  align?: "center" | "left";
+  align?: "split" | "center" | "left";
   invert?: boolean;
 }
-const { eyebrow, lead, align = "center", invert = false } = Astro.props;
-const isCenter = align === "center";
+const { eyebrow, title, lead, align = "split", invert = false } = Astro.props;
+const headingClass = ["title-h2", eyebrow ? "mt-5" : "", invert ? "text-white" : "text-ink"];
 ---
 
-<div class={isCenter ? "mx-auto max-w-3xl text-center" : "max-w-2xl"}>
-  {eyebrow && <span class={invert ? "eyebrow eyebrow--invert" : "eyebrow"}>{eyebrow}</span>}
-  <h2 class:list={["title-h2", eyebrow ? "mt-5" : "", invert ? "text-white" : "text-ink"]}>
-    <slot />
-  </h2>
-  {lead && (
-    <p class:list={["lead mt-5", isCenter ? "mx-auto max-w-2xl" : "", invert ? "!text-brand-100/75" : ""]}>
-      {lead}
-    </p>
-  )}
-</div>
+{align === "split" ? (
+  <div class="grid gap-x-16 gap-y-6 md:grid-cols-2 md:items-end">
+    <div>
+      {eyebrow && <span class={invert ? "eyebrow eyebrow--invert" : "eyebrow"}>{eyebrow}</span>}
+      <h2 class:list={headingClass}>{title ?? <slot />}</h2>
+    </div>
+    {lead && <p class:list={["lead md:pb-2", invert ? "!text-brand-100/75" : ""]}>{lead}</p>}
+  </div>
+) : align === "center" ? (
+  <div class="mx-auto max-w-3xl text-center">
+    {eyebrow && <span class={invert ? "eyebrow eyebrow--invert" : "eyebrow"}>{eyebrow}</span>}
+    <h2 class:list={headingClass}>{title ?? <slot />}</h2>
+    {lead && <p class:list={["lead mx-auto mt-5 max-w-2xl", invert ? "!text-brand-100/75" : ""]}>{lead}</p>}
+  </div>
+) : (
+  <div class="max-w-2xl">
+    {eyebrow && <span class={invert ? "eyebrow eyebrow--invert" : "eyebrow"}>{eyebrow}</span>}
+    <h2 class:list={headingClass}>{title ?? <slot />}</h2>
+    {lead && <p class:list={["lead mt-5", invert ? "!text-brand-100/75" : ""]}>{lead}</p>}
+  </div>
+)}
