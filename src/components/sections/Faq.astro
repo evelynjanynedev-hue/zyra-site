@@ -1,0 +1,22 @@
+---
+import { faq } from "../../data/site";
+import SectionHeader from "../ui/SectionHeader.astro";
+---
+
+<section id="duvidas" class="section scroll-mt-20 bg-surface-2/60">
+  <div class="container">
+    <SectionHeader eyebrow="Dúvidas frequentes" title="Tirando o medo de contratar." />
+
+    <div class="mx-auto mt-12 max-w-3xl divide-y divide-line rounded-[var(--radius-2xl)] border border-line bg-surface px-2 shadow-[var(--shadow-sm)] sm:px-4">
+      {faq.map((item) => (
+        <details class="group px-4 sm:px-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-6 text-base font-semibold text-ink marker:hidden">
+            {item.q}
+            <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-surface-2 text-lg font-light text-brand-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="pb-7 pr-10 text-sm leading-relaxed text-muted">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

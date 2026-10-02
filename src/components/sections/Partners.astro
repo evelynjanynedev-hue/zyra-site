@@ -1,0 +1,22 @@
+---
+import { wa } from "../../data/site";
+import SectionHeader from "../ui/SectionHeader.astro";
+---
+
+<section id="parceiro" class="section scroll-mt-20">
+  <div class="container">
+    <div class="relative overflow-hidden rounded-[var(--radius-3xl)] border border-line bg-surface px-8 py-14 shadow-[var(--shadow-sm)] sm:px-16 sm:py-20">
+      <div class="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-r from-brand-500/15 via-accent-500/15 to-cyan-400/15 glow"></div>
+      <div class="relative">
+        <SectionHeader
+          eyebrow="Seja parceiro"
+          title="Conhece uma empresa que precisa crescer?"
+          lead="Você indica. A Zyra conversa com ela. Se virar cliente, você recebe seu benefício."
+        />
+        <div class="mt-9 flex justify-center">
+          <a href={wa("Olá, quero indicar uma empresa para a Zyra.")} target="_blank" rel="noopener" class="btn btn-primary">Quero ser parceiro</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

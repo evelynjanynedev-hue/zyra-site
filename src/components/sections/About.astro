@@ -1,0 +1,32 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+---
+
+<section class="section">
+  <div class="container">
+    <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div class="relative">
+        <div class="overflow-hidden rounded-[var(--radius-3xl)] border border-line shadow-[var(--shadow-xl)]">
+          <img src="/img/team.jpg" alt="Time da Zyra trabalhando no crescimento de uma empresa" width="1200" height="900" loading="lazy" class="h-[26rem] w-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -right-4 hidden overflow-hidden rounded-[var(--radius-2xl)] border-4 border-white shadow-[var(--shadow-xl)] sm:block">
+          <img src="/img/workspace.jpg" alt="Ambiente de trabalho da Zyra" width="400" height="300" loading="lazy" class="h-36 w-52 object-cover" />
+        </div>
+      </div>
+
+      <div>
+        <SectionHeader
+          align="left"
+          eyebrow="Quem somos"
+          title="Gente de verdade cuidando do seu crescimento."
+          lead="Estratégia, execução e tecnologia trabalhando juntas para que você não precise montar essa estrutura sozinho."
+        />
+        <div class="mt-8 flex flex-wrap gap-3">
+          {["Estratégia", "Execução", "Tecnologia"].map((t) => (
+            <span class="rounded-full border border-line bg-surface-2 px-4 py-1.5 text-sm font-medium text-muted">{t}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

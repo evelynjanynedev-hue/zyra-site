@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import { wa } from "../data/site";
+
+const sections = [
+  { title: "1. Quem somos", body: "A Zyra é uma operação de crescimento sob demanda que oferece estratégia, marketing, tráfego pago, atendimento, tecnologia e CRM para empresas. Nesta política, \u201cnós\u201d ou \u201cZyra\u201d refere-se ao responsável pelo tratamento dos dados descritos abaixo." },
+  { title: "2. Quais dados coletamos", body: "Coletamos apenas os dados necessários para responder ao seu contato e prestar nossos serviços: dados de contato fornecidos por você (nome, nome do negócio, WhatsApp e objetivo informado no formulário); conteúdo das mensagens trocadas por WhatsApp, e-mail ou outros canais; e dados de navegação anônimos, como páginas visitadas e informações técnicas do dispositivo, quando aplicável." },
+  { title: "3. Como usamos seus dados", body: "Entrar em contato e responder à sua solicitação de diagnóstico ou orçamento; apresentar a solução mais adequada ao seu negócio; executar os serviços contratados e melhorar nosso atendimento; e cumprir obrigações legais e regulatórias. Não utilizamos seus dados de contato para finalidades diferentes das informadas sem o seu consentimento." },
+  { title: "4. Compartilhamento", body: "Não vendemos seus dados. Podemos compartilhar informações apenas com fornecedores que nos apoiam operacionalmente (por exemplo, ferramentas de mensagem e CRM), sempre com confidencialidade, e quando exigido por lei." },
+  { title: "5. Cookies", body: "Este site pode utilizar cookies e tecnologias semelhantes para funcionamento e análise. Você pode gerenciar ou desativar cookies nas configurações do seu navegador." },
+  { title: "6. Seus direitos (LGPD)", body: "Nos termos da LGPD, você pode solicitar a confirmação do tratamento, o acesso, a correção, a anonimização, a portabilidade ou a exclusão dos seus dados, além de revogar o consentimento." },
+  { title: "7. Segurança", body: "Adotamos medidas técnicas e organizacionais para proteger seus dados contra acessos não autorizados, perdas e alterações indevidas." },
+];
+---
+
+<Base title="Política de Privacidade" description="Como a Zyra coleta, usa e protege seus dados, em conformidade com a LGPD.">
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-2xl">
+        <span class="eyebrow">Institucional</span>
+        <h1 class="title-h1 mt-6">Política de Privacidade</h1>
+        <p class="mt-4 text-sm text-faint">Última atualização: setembro de 2026.</p>
+
+        <div class="mt-10 space-y-8">
+          {sections.map((s) => (
+            <div>
+              <h2 class="text-lg font-semibold text-ink">{s.title}</h2>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{s.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 rounded-2xl border border-line bg-surface-2/60 p-6">
+          <p class="text-sm text-muted">
+            Dúvidas sobre seus dados? Fale com a gente pelo WhatsApp
+            <a href={wa()} target="_blank" rel="noopener" class="font-semibold text-brand-500">+55 62 92002-3208</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

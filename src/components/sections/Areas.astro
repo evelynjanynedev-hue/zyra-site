@@ -1,0 +1,35 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+const areas = [
+  { title: "Atrair", text: "Marketing, conteúdo, tráfego pago e prospecção, para gerar demanda.", path: "M3 11l18-8-8 18-2-8-8-2z" },
+  { title: "Converter", text: "Leads, vendas, CRM e atendimento, para transformar contato em cliente.", path: "M3 3v18h18M7 15l3-3 3 3 5-6" },
+  { title: "Operar", text: "Automação, processos e tecnologia, para a operação rodar sem travar.", path: "M12 3v3m0 12v3M3 12h3m12 0h3M6 6l2 2m8 8l2 2m0-12l-2 2M8 16l-2 2" },
+  { title: "Melhorar", text: "Dados, acompanhamento e otimização, para o resultado evoluir a cada ciclo.", path: "M21 12a9 9 0 11-3-6.7M21 4v5h-5" },
+];
+---
+
+<section id="areas" class="section scroll-mt-20 bg-surface-2/60">
+  <div class="container">
+    <SectionHeader
+      eyebrow="O que a Zyra pode cuidar"
+      title="Tudo o que precisa acontecer para o crescimento acontecer."
+      lead="Quatro áreas conectadas em uma única operação, em vez de serviços soltos."
+    />
+
+    <div class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {areas.map((a) => (
+        <div class="card card-lift flex flex-col p-7">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-brand-50 text-brand-600">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={a.path}></path></svg>
+          </span>
+          <h3 class="mt-5 text-lg font-semibold text-ink">{a.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{a.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-10 text-center text-sm font-medium text-muted">
+      Atrair → Converter → Operar → Melhorar.<span class="mx-2 text-brand-500">↺</span>E o ciclo recomeça melhor a cada mês.
+    </p>
+  </div>
+</section>

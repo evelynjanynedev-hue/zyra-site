@@ -1,0 +1,23 @@
+---
+import { wa } from "../../data/site";
+---
+
+<section class="relative overflow-hidden bg-ink py-28 text-white sm:py-36">
+  <img src="/img/workspace.jpg" alt="" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]" />
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/88 to-ink"></div>
+  <div class="pointer-events-none absolute inset-x-0 -top-40 h-96 bg-gradient-to-r from-brand-500/40 via-accent-500/40 to-cyan-400/30 glow"></div>
+  <div class="grid-lines-dark pointer-events-none absolute inset-0 opacity-50"></div>
+
+  <div class="container relative text-center">
+    <h2 class="title-h2 mx-auto max-w-3xl text-white">Pronto para tirar o crescimento das suas mãos?</h2>
+    <p class="lead mx-auto mt-6 max-w-xl !text-brand-100/75">
+      Responda 3 perguntas. A Zyra entende seu momento e mostra por onde começar.
+    </p>
+    <div class="mt-10 flex justify-center">
+      <a href={wa("Olá, quero meu diagnóstico gratuito com a Zyra.")} target="_blank" rel="noopener" class="btn btn-primary">
+        Quero meu diagnóstico gratuito
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>

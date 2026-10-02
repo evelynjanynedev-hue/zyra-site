@@ -1,0 +1,97 @@
+---
+import { wa } from "../../data/site";
+import SectionHeader from "../ui/SectionHeader.astro";
+
+const goals = [
+  "Atrair mais clientes",
+  "Vender mais",
+  "Organizar marketing e vendas",
+  "Melhorar atendimento",
+  "Automatizar processos",
+  "Ainda não sei",
+];
+---
+
+<section id="contato" class="section scroll-mt-20 bg-surface-2/60">
+  <div class="container">
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <SectionHeader
+          align="left"
+          eyebrow="Fale com a gente"
+          title="Vamos entender onde sua empresa pode crescer."
+          lead="Responda 3 perguntas rápidas. A gente entra na conversa já entendendo o seu momento."
+        />
+        <ul class="mt-8 space-y-3">
+          {["Resposta rápida no WhatsApp", "Sem compromisso e sem fidelidade", "Diagnóstico inicial gratuito"].map((t) => (
+            <li class="flex items-center gap-3 text-sm font-medium text-ink">
+              <span class="grid h-6 w-6 place-items-center rounded-full bg-brand-500 text-xs text-white">✓</span>{t}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <form id="contact-form" class="card p-6 sm:p-8">
+          <div class="space-y-5">
+            <div>
+              <label for="c-nome" class="block text-sm font-semibold text-ink">Seu nome</label>
+              <input id="c-nome" name="nome" type="text" required autocomplete="name" placeholder="Como podemos te chamar?"
+                class="mt-2 w-full rounded-xl border border-line bg-surface-2/60 px-4 py-3 text-base text-ink placeholder:text-faint focus:border-brand-400 focus:bg-surface focus:outline-none sm:text-sm" />
+            </div>
+            <div>
+              <label for="c-negocio" class="block text-sm font-semibold text-ink">Qual é o seu negócio?</label>
+              <input id="c-negocio" name="negocio" type="text" required placeholder="Ex.: Clínica de estética"
+                class="mt-2 w-full rounded-xl border border-line bg-surface-2/60 px-4 py-3 text-base text-ink placeholder:text-faint focus:border-brand-400 focus:bg-surface focus:outline-none sm:text-sm" />
+            </div>
+            <fieldset>
+              <legend class="block text-sm font-semibold text-ink">O que você mais quer melhorar agora?</legend>
+              <div class="mt-3 grid gap-2 sm:grid-cols-2">
+                {goals.map((g, i) => (
+                  <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-line px-4 py-3 text-sm text-muted transition has-[:checked]:border-brand-500 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-700">
+                    <input type="radio" name="objetivo" value={g} checked={i === 0} class="h-4 w-4 shrink-0 accent-brand-500" />
+                    {g}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="btn btn-primary mt-6 w-full">
+            Falar com a Zyra
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </button>
+          <p class="mt-3 text-center text-xs text-faint">Ao enviar, abriremos o WhatsApp com sua mensagem pronta.</p>
+        </form>
+
+        <div id="contact-success" class="card hidden p-8">
+          <h3 class="text-2xl font-semibold tracking-tight text-ink">Vamos começar.</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            Recebemos suas informações. Agora vamos entender seu negócio e identificar
+            onde a Zyra pode ajudar.
+          </p>
+          <a id="contact-success-link" href={wa()} target="_blank" rel="noopener" class="btn btn-primary mt-7 w-full">Continuar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const success = document.getElementById("contact-success");
+  const successLink = document.getElementById("contact-success-link") as HTMLAnchorElement | null;
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const nome = String(data.get("nome") || "");
+    const negocio = String(data.get("negocio") || "");
+    const objetivo = String(data.get("objetivo") || "");
+    const msg = `Olá, sou ${nome} do negócio ${negocio}. Meu principal objetivo agora é: ${objetivo}.`;
+    const url = `https://wa.me/5562920023208?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank", "noopener");
+    if (successLink) successLink.href = url;
+    form.classList.add("hidden");
+    success?.classList.remove("hidden");
+  });
+</script>

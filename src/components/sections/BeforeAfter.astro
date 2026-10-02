@@ -1,0 +1,53 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+
+const before = [
+  "Marketing com um fornecedor.",
+  "Leads em outro lugar.",
+  "CRM separado.",
+  "Vendas tentando acompanhar.",
+];
+const after = ["Estratégia", "Marketing", "Aquisição", "Leads", "CRM", "Acompanhamento", "Otimização"];
+---
+
+<section class="section bg-surface-2/60">
+  <div class="container">
+    <SectionHeader eyebrow="A diferença" title="Uma operação. Um time. Uma estratégia." />
+
+    <div class="mt-16 grid items-stretch gap-6 lg:grid-cols-2">
+      <div class="card flex flex-col p-8 sm:p-10">
+        <div class="flex items-center gap-3">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-surface-3 text-faint">✕</span>
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Antes</p>
+        </div>
+        <p class="mt-5 text-lg font-medium text-ink">Cada parte com alguém diferente.</p>
+        <ul class="mt-8 space-y-3">
+          {before.map((line) => (
+            <li class="flex items-center gap-3 rounded-2xl border border-dashed border-line px-5 py-4 text-sm text-muted">
+              <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-faint"></span>{line}
+            </li>
+          ))}
+        </ul>
+        <p class="mt-auto pt-7 text-sm font-semibold text-danger">E ninguém olhando o todo.</p>
+      </div>
+
+      <div class="relative flex flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-brand-200 bg-surface p-8 shadow-[var(--shadow-md)] sm:p-10">
+        <div class="pointer-events-none absolute inset-x-0 -top-20 h-40 bg-gradient-to-r from-brand-500/20 to-accent-500/20 glow"></div>
+        <div class="relative flex items-center gap-3">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-50 text-brand-500">✓</span>
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Com a Zyra</p>
+        </div>
+        <p class="relative mt-5 text-lg font-medium text-ink">Uma equipe cuidando do crescimento de ponta a ponta.</p>
+        <div class="relative mt-8 flex flex-wrap gap-2.5">
+          {after.map((a) => (
+            <span class="rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700">{a}</span>
+          ))}
+        </div>
+        <p class="relative mt-6 text-sm text-muted">Tudo conectado ao mesmo objetivo.</p>
+        <p class="relative mt-auto pt-7 text-sm font-semibold text-brand-600">
+          Você não precisa coordenar fornecedores. Você aprova. A Zyra conduz.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

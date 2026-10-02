@@ -1,0 +1,35 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+const blocks = [
+  { tag: "Seu negócio", text: "Entendemos sua realidade." },
+  { tag: "Sua estratégia", text: "Definimos o que faz sentido." },
+  { tag: "Sua operação", text: "Executamos e ajustamos." },
+];
+---
+
+<section class="section">
+  <div class="container">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+      <SectionHeader
+        align="left"
+        eyebrow="Sob medida"
+        title="Nada genérico. Tudo começa pelo seu negócio."
+        lead="A tecnologia e os processos da Zyra permitem escala. A estratégia continua sendo adaptada à realidade da sua empresa."
+      />
+
+      <ol class="space-y-4">
+        {blocks.map((b, i) => (
+          <li class="flex items-center gap-5">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-surface text-sm font-semibold text-brand-600 shadow-[var(--shadow-sm)]">
+              {`0${i + 1}`}
+            </span>
+            <div class="flex-1 rounded-2xl border border-line bg-surface px-6 py-5 shadow-[var(--shadow-sm)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">{b.tag}</p>
+              <p class="mt-1.5 text-base font-medium text-ink">{b.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>

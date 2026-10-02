@@ -1,0 +1,22 @@
+---
+interface Props {
+  eyebrow?: string;
+  lead?: string;
+  align?: "center" | "left";
+  invert?: boolean;
+}
+const { eyebrow, lead, align = "center", invert = false } = Astro.props;
+const isCenter = align === "center";
+---
+
+<div class={isCenter ? "mx-auto max-w-3xl text-center" : "max-w-2xl"}>
+  {eyebrow && <span class={invert ? "eyebrow eyebrow--invert" : "eyebrow"}>{eyebrow}</span>}
+  <h2 class:list={["title-h2", eyebrow ? "mt-5" : "", invert ? "text-white" : "text-ink"]}>
+    <slot />
+  </h2>
+  {lead && (
+    <p class:list={["lead mt-5", isCenter ? "mx-auto max-w-2xl" : "", invert ? "!text-brand-100/75" : ""]}>
+      {lead}
+    </p>
+  )}
+</div>
