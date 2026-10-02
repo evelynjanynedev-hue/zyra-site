@@ -2,6 +2,7 @@ import Hero from "@/components/sections/hero";
 import Proof from "@/components/sections/proof";
 import Problem from "@/components/sections/problem";
 import BeforeAfter from "@/components/sections/before-after";
+import Tailored from "@/components/sections/tailored";
 import HowItWorks from "@/components/sections/how-it-works";
 import Product from "@/components/sections/product";
 import Areas from "@/components/sections/areas";
@@ -21,6 +22,7 @@ export default function Home() {
       <Proof />
       <Problem />
       <BeforeAfter />
+      <Tailored />
       <HowItWorks />
       <Product />
       <Areas />
@@ -28,8 +30,8 @@ export default function Home() {
       <Results />
       <Trust />
       <About />
-      <Partners />
       <Faq />
+      <Partners />
       <Contact />
       <FinalCta />
     </>

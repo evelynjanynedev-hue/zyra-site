@@ -67,7 +67,7 @@ export default function SiteHeader() {
           </div>
 
           {open && (
-            <div className="mt-2 rounded-2xl border border-gray-100 bg-white p-4 shadow-[var(--shadow-card)] md:hidden">
+            <div className="mt-2 rounded-2xl border border-gray-100 bg-white p-4 shadow-[var(--shadow-elevated)] md:hidden">
               <nav className="flex flex-col" aria-label="Menu mobile">
                 {nav.map((item) => (
                   <a

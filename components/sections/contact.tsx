@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { whatsappLink } from "@/lib/site";
+import SectionHeading from "@/components/section-heading";
 
 const goals = [
   "Atrair mais clientes",
@@ -31,14 +32,12 @@ export default function Contact() {
       <div className="container-page">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
-            <span className="eyebrow">Fale com a gente</span>
-            <h2 className="section-title mt-4">
-              Quer ver o que podemos fazer pelo seu negócio?
-            </h2>
-            <p className="section-lead">
-              Responda 3 perguntas rápidas. A partir daí, começamos a conversa já
-              entendendo qual solução faz mais sentido para a sua empresa.
-            </p>
+            <SectionHeading
+              align="left"
+              eyebrow="Fale com a gente"
+              title="Vamos entender onde sua empresa pode crescer."
+              lead="Responda 3 perguntas rápidas. A gente entra na conversa já entendendo o seu momento."
+            />
             <ul className="mt-8 space-y-3">
               {[
                 "Resposta rápida no WhatsApp",
@@ -57,7 +56,7 @@ export default function Contact() {
 
           <div>
             {sent ? (
-              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-[var(--shadow-card)]">
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-[var(--shadow-elevated)]">
                 <h3 className="text-2xl font-semibold tracking-tight text-ink">
                   Vamos começar.
                 </h3>
@@ -77,7 +76,7 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="rounded-3xl border border-gray-100 bg-white p-6 shadow-[var(--shadow-card)] sm:p-8"
+                className="rounded-3xl border border-gray-100 bg-white p-6 shadow-[var(--shadow-elevated)] sm:p-8"
               >
                 <div className="space-y-5">
                   <div>

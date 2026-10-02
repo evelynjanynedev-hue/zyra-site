@@ -1,18 +1,19 @@
 import { faq } from "@/lib/site";
+import SectionHeading from "@/components/section-heading";
 
 export default function Faq() {
   return (
-    <section id="duvidas" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="duvidas" className="scroll-mt-24 py-24 sm:py-32">
       <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">Dúvidas frequentes</span>
-          <h2 className="section-title mt-4">Tirando o medo de contratar.</h2>
-        </div>
+        <SectionHeading
+          eyebrow="Dúvidas frequentes"
+          title="Tirando o medo de contratar."
+        />
 
-        <div className="mx-auto mt-12 max-w-3xl divide-y divide-gray-100 rounded-3xl border border-gray-100 bg-white px-2 shadow-[var(--shadow-soft)]">
+        <div className="mx-auto mt-12 max-w-3xl divide-y divide-gray-100 rounded-3xl border border-gray-200/70 bg-white px-2 shadow-[var(--shadow-soft)] sm:px-4">
           {faq.map((item) => (
             <details key={item.q} className="group px-4 sm:px-6">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-base font-semibold text-ink marker:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-6 text-base font-semibold text-ink marker:hidden">
                 {item.q}
                 <span
                   className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gray-50 text-lg font-light text-brand-500 transition group-open:rotate-45"
@@ -21,7 +22,7 @@ export default function Faq() {
                   +
                 </span>
               </summary>
-              <p className="pb-6 pr-10 text-sm leading-relaxed text-ink-soft">
+              <p className="pb-7 pr-10 text-sm leading-relaxed text-ink-soft">
                 {item.a}
               </p>
             </details>

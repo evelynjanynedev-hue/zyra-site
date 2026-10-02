@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/section-heading";
+
 const items = [
   "Marketing",
   "Leads",
@@ -10,36 +12,34 @@ const items = [
 
 export default function Problem() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-24 sm:py-32">
       <div className="container-page">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="eyebrow">Isso parece familiar?</span>
-          <h2 className="section-title mt-4">Você está tentando cuidar de tudo?</h2>
-          <p className="section-lead mx-auto text-center">
-            Marketing, leads, atendimento, vendas, ferramentas, estratégia. Quando
-            cada parte fica com um fornecedor diferente, ninguém coordena o todo.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Isso parece familiar?"
+          title="O crescimento não deveria depender de você cuidar de tudo."
+          lead="Marketing, leads, atendimento, vendas, ferramentas, estratégia. Quando cada parte fica separada, alguém precisa coordenar tudo — e normalmente esse alguém é você."
+        />
 
         <div className="mx-auto mt-12 flex max-w-3xl flex-wrap justify-center gap-3">
           {items.map((i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-ink-soft"
+              className="rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-ink-soft shadow-sm"
             >
-              <span className="grid h-5 w-5 place-items-center rounded-md border border-gray-300 text-[10px] text-transparent" aria-hidden="true">
-                ✓
-              </span>
               {i}
             </span>
           ))}
         </div>
 
-        <div className="mx-auto mt-14 max-w-2xl rounded-3xl bg-brand-950 p-8 text-center text-white sm:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-300">
-            É exatamente aí que a Zyra entra
+        <div className="relative mx-auto mt-16 max-w-3xl overflow-hidden rounded-[2rem] bg-ink px-8 py-14 text-center sm:px-12">
+          <div
+            className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-r from-brand-500/40 via-accent-500/40 to-cyan-accent/30 blur-3xl"
+            aria-hidden="true"
+          />
+          <p className="relative text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
+            É aí que a Zyra entra
           </p>
-          <p className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+          <p className="relative mt-5 text-2xl font-semibold tracking-tight text-white sm:text-4xl">
             Você cuida do negócio.
             <br />
             A Zyra cuida do crescimento.

@@ -3,33 +3,33 @@ const segments = [
   "Consultórios",
   "Escritórios",
   "Comércio local",
-  "Serviços",
   "Indústrias",
+  "Serviços",
   "Prestadores",
   "Profissionais liberais",
 ];
 
 export default function Proof() {
   return (
-    <section className="border-y border-gray-100 bg-gray-50/70 py-10">
+    <section className="hairline bg-gray-50/50 py-14">
       <div className="container-page">
-        <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-          <div className="flex items-center gap-4">
-            <p className="text-4xl font-semibold tracking-tight text-ink">80+</p>
-            <div>
+        <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
+          <div className="flex items-center gap-5">
+            <p className="text-5xl font-semibold tracking-tight text-ink">80+</p>
+            <div className="text-left">
               <p className="text-sm font-semibold text-ink">empresas atendidas</p>
-              <p className="text-sm text-amber-500" aria-label="Avaliação cinco estrelas">
+              <p className="mt-0.5 text-sm text-amber-500" aria-label="Avaliação cinco estrelas">
                 ★★★★★
               </p>
             </div>
           </div>
-          <p className="max-w-md text-sm leading-relaxed text-ink-soft">
-            Empresas de diferentes segmentos já contam com a Zyra para cuidar do
-            crescimento.
+          <p className="max-w-md text-center text-sm leading-relaxed text-ink-soft lg:text-left">
+            Empresas de diferentes segmentos já confiaram à Zyra parte da sua
+            operação de crescimento.
           </p>
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2.5 sm:justify-start">
+        <div className="mt-9 flex flex-wrap justify-center gap-2.5 lg:justify-start">
           {segments.map((s) => (
             <span
               key={s}

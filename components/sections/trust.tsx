@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/section-heading";
+
 const points = [
   {
     title: "Nada importante acontece sem você",
@@ -8,6 +10,10 @@ const points = [
     text: "Acompanhe ações, resultados e próximos passos, sem precisar caçar informação.",
   },
   {
+    title: "Você sabe pelo que está pagando",
+    text: "O escopo, o investimento e o que será acompanhado ficam claros desde o início.",
+  },
+  {
     title: "Você pode sair quando quiser",
     text: "Sem fidelidade. Continuamos porque o trabalho está gerando valor.",
   },
@@ -15,25 +21,26 @@ const points = [
 
 export default function Trust() {
   return (
-    <section className="bg-brand-950 py-20 text-white sm:py-28">
-      <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
-            Confiança
-          </span>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-            Você continua no controle.
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-brand-100/70 sm:text-lg">
-            Contratar um time externo não significa perder o controle da sua
-            empresa.
-          </p>
-        </div>
+    <section className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+      <div
+        className="pointer-events-none absolute inset-x-0 -top-40 h-80 bg-gradient-to-r from-brand-500/30 via-accent-500/30 to-cyan-accent/20 blur-3xl"
+        aria-hidden="true"
+      />
+      <div className="container-page relative">
+        <SectionHeading
+          invert
+          eyebrow="Confiança"
+          title="Você continua no controle."
+          lead="Contratar um time externo não significa perder o controle da sua empresa."
+        />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {points.map((p) => (
-            <div key={p.title} className="rounded-3xl border border-white/10 bg-white/[0.05] p-8">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-500/20 text-brand-200" aria-hidden="true">
+            <div
+              key={p.title}
+              className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition hover:bg-white/[0.07]"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-500/20 text-brand-200" aria-hidden="true">
                 ✓
               </span>
               <h3 className="mt-5 text-lg font-semibold">{p.title}</h3>

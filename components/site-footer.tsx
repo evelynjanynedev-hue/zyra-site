@@ -4,7 +4,7 @@ import { site, whatsappLink } from "@/lib/site";
 export default function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-white/10 bg-brand-950 pt-16 pb-24 text-brand-100/70 sm:pb-16">
+    <footer className="border-t border-white/10 bg-ink pt-16 pb-24 text-brand-100/70 sm:pb-16">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
