@@ -1,33 +1,31 @@
 ---
 const kpis = [
-  { label: "Novos contatos", value: "128", delta: "+12%", tone: "text-brand-600" },
-  { label: "Em negociação", value: "34", delta: "+6%", tone: "text-warning" },
-  { label: "Ganhos", value: "19", delta: "+9%", tone: "text-success" },
+  { label: "Leads em conversa", value: "128", delta: "+12%", tone: "text-brand-600" },
+  { label: "Propostas enviadas", value: "34", delta: "+6%", tone: "text-warning" },
+  { label: "Clientes ganhos", value: "19", delta: "+9%", tone: "text-success" },
 ];
 
-const pipeline = [
-  { stage: "Novos", count: 12, pct: 100, color: "var(--color-brand-500)" },
-  { stage: "Em negociação", count: 7, pct: 58, color: "var(--color-warning)" },
-  { stage: "Ganhos", count: 5, pct: 42, color: "var(--color-success)" },
+const conversations = [
+  { name: "Clínica Sorriso", note: "respondeu no WhatsApp", tone: "bg-success" },
+  { name: "Studio Fit", note: "pediu a proposta", tone: "bg-brand-500" },
+  { name: "Consultório Lima", note: "aguardando retorno", tone: "bg-warning" },
+  { name: "Escola Aprender", note: "reunião agendada", tone: "bg-brand-500" },
 ];
 
 const navItems = ["Visão geral", "Operação", "Oportunidades", "Estratégia", "Resultados"];
 ---
 
 <div class="overflow-hidden rounded-2xl border border-line bg-surface shadow-[var(--shadow-xl)]">
-  <!-- browser bar -->
   <div class="flex items-center gap-2 border-b border-line bg-surface-2/70 px-4 py-3">
     <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span>
     <span class="h-3 w-3 rounded-full bg-[#febc2e]"></span>
     <span class="h-3 w-3 rounded-full bg-[#28c840]"></span>
     <span class="mx-auto hidden items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 text-[11px] text-faint sm:flex">
-      <span class="h-1.5 w-1.5 rounded-full bg-success"></span>
-      app.zyra360.com.br
+      <span class="h-1.5 w-1.5 rounded-full bg-success"></span> app.zyra360.com.br
     </span>
   </div>
 
   <div class="grid grid-cols-12">
-    <!-- sidebar -->
     <aside class="col-span-3 hidden flex-col border-r border-line bg-surface-2/50 p-4 sm:flex">
       <div class="flex items-center gap-2">
         <span class="grid h-7 w-7 place-items-center rounded-lg bg-brand-500 text-xs font-bold text-white">Z</span>
@@ -47,7 +45,6 @@ const navItems = ["Visão geral", "Operação", "Oportunidades", "Estratégia", 
       </div>
     </aside>
 
-    <!-- main -->
     <div class="col-span-12 p-4 sm:col-span-9 sm:p-6">
       <div class="flex items-center justify-between">
         <div>
@@ -59,7 +56,6 @@ const navItems = ["Visão geral", "Operação", "Oportunidades", "Estratégia", 
         </span>
       </div>
 
-      <!-- KPIs -->
       <div class="mt-5 grid grid-cols-3 gap-3">
         {kpis.map((k) => (
           <div class="rounded-xl border border-line p-3.5">
@@ -70,14 +66,13 @@ const navItems = ["Visão geral", "Operação", "Oportunidades", "Estratégia", 
         ))}
       </div>
 
-      <!-- chart -->
       <div class="mt-4 rounded-xl border border-line p-4">
         <div class="flex items-center justify-between">
           <p class="text-[11px] font-medium text-faint">Resultado acompanhado</p>
           <span class="text-[10px] font-semibold text-success">+58% no período</span>
         </div>
         <div class="mt-3">
-          <svg viewBox="0 0 560 140" class="h-28 w-full" preserveAspectRatio="none" aria-hidden="true">
+          <svg viewBox="0 0 560 140" class="h-24 w-full" preserveAspectRatio="none" aria-hidden="true">
             <defs>
               <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="var(--color-brand-500)" stop-opacity="0.28"></stop>
@@ -88,26 +83,20 @@ const navItems = ["Visão geral", "Operação", "Oportunidades", "Estratégia", 
             <path d="M0,110 C60,96 90,70 140,78 C190,86 220,40 280,44 C340,48 360,72 420,52 C470,36 510,24 560,18" fill="none" stroke="var(--color-brand-500)" stroke-width="2.5" stroke-linecap="round"></path>
           </svg>
         </div>
-        <div class="mt-1 flex justify-between text-[9px] text-faint">
-          {["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"].map((m) => (
-            <span>{m}</span>
-          ))}
-        </div>
       </div>
 
-      <!-- pipeline -->
-      <div class="mt-4 grid gap-2.5">
-        {pipeline.map((p) => (
-          <div class="rounded-xl border border-line p-3.5">
-            <div class="flex items-center justify-between">
-              <p class="text-[12px] font-medium text-ink">{p.stage}</p>
-              <p class="text-[13px] font-semibold text-ink">{p.count}</p>
-            </div>
-            <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-3">
-              <div class="h-full rounded-full" style={`width:${p.pct}%;background:${p.color}`}></div>
-            </div>
-          </div>
-        ))}
+      <div class="mt-4 rounded-xl border border-line p-4">
+        <p class="text-[11px] font-medium text-faint">Conversas recentes</p>
+        <ul class="mt-3 space-y-2.5">
+          {conversations.map((c) => (
+            <li class="flex items-center justify-between gap-3 border-b border-line pb-2.5 last:border-0 last:pb-0">
+              <span class="flex items-center gap-2.5 text-[12px] text-ink">
+                <span class:list={["h-2 w-2 rounded-full", c.tone]}></span>{c.name}
+              </span>
+              <span class="text-[11px] text-faint">{c.note}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   </div>

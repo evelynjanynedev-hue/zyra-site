@@ -14,39 +14,30 @@ const after = ["Estratégia", "Marketing", "Aquisição", "Leads", "CRM", "Acomp
   <div class="container">
     <SectionHeader eyebrow="A diferença" title="Uma operação. Um time. Uma estratégia." />
 
-    <div class="mt-16 grid items-stretch gap-6 lg:grid-cols-2">
-      <div class="card flex flex-col p-8 sm:p-10">
-        <div class="flex items-center gap-3">
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-surface-3 text-faint">✕</span>
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Antes</p>
-        </div>
-        <p class="mt-5 text-lg font-medium text-ink">Cada parte com alguém diferente.</p>
-        <ul class="mt-8 space-y-3">
+    <div class="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-0">
+      <div class="lg:pr-16">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-faint">Antes</p>
+        <h3 class="mt-4 text-xl font-semibold text-ink">Cada parte com alguém diferente.</h3>
+        <ul class="mt-7 space-y-3.5">
           {before.map((line) => (
-            <li class="flex items-center gap-3 rounded-2xl border border-dashed border-line px-5 py-4 text-sm text-muted">
-              <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-faint"></span>{line}
+            <li class="flex items-start gap-3 text-[15px] text-muted">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-faint"></span>{line}
             </li>
           ))}
         </ul>
-        <p class="mt-auto pt-7 text-sm font-semibold text-danger">E ninguém olhando o todo.</p>
+        <p class="mt-7 text-[15px] font-semibold text-danger">E ninguém olhando o todo.</p>
       </div>
 
-      <div class="relative flex flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-brand-200 bg-surface p-8 shadow-[var(--shadow-md)] sm:p-10">
-        <div class="pointer-events-none absolute inset-x-0 -top-20 h-40 bg-gradient-to-r from-brand-500/20 to-accent-500/20 glow"></div>
-        <div class="relative flex items-center gap-3">
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-50 text-brand-500">✓</span>
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Com a Zyra</p>
-        </div>
-        <p class="relative mt-5 text-lg font-medium text-ink">Uma equipe cuidando do crescimento de ponta a ponta.</p>
-        <div class="relative mt-8 flex flex-wrap gap-2.5">
+      <div class="border-t border-line pt-12 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Com a Zyra</p>
+        <h3 class="mt-4 text-xl font-semibold text-ink">Uma equipe cuidando do crescimento de ponta a ponta.</h3>
+        <div class="mt-7 flex flex-wrap gap-2">
           {after.map((a) => (
-            <span class="rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700">{a}</span>
+            <span class="rounded-full bg-brand-50 px-3.5 py-1.5 text-sm font-medium text-brand-700">{a}</span>
           ))}
         </div>
-        <p class="relative mt-6 text-sm text-muted">Tudo conectado ao mesmo objetivo.</p>
-        <p class="relative mt-auto pt-7 text-sm font-semibold text-brand-600">
-          Você não precisa coordenar fornecedores. Você aprova. A Zyra conduz.
-        </p>
+        <p class="mt-7 text-[15px] text-muted">Tudo conectado ao mesmo objetivo.</p>
+        <p class="mt-3 text-[15px] font-semibold text-brand-600">Você não precisa coordenar fornecedores. Você aprova. A Zyra conduz.</p>
       </div>
     </div>
   </div>

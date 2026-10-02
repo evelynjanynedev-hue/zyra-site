@@ -12,9 +12,9 @@ const items = ["Marketing", "Leads", "Atendimento", "Vendas", "CRM", "Ferramenta
       lead="Marketing, leads, atendimento, vendas, ferramentas, estratégia. Quando cada parte fica separada, alguém precisa coordenar tudo, e normalmente esse alguém é você."
     />
 
-    <div class="mx-auto mt-12 flex max-w-3xl flex-wrap justify-center gap-3">
+    <div class="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
       {items.map((i) => (
-        <span class="rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-medium text-muted shadow-[var(--shadow-xs)]">{i}</span>
+        <span class="rounded-xl border border-line bg-surface px-4 py-3.5 text-center text-sm font-medium text-muted shadow-[var(--shadow-xs)]">{i}</span>
       ))}
     </div>
 
