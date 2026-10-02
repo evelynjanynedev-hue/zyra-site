@@ -1,5 +1,7 @@
-.DS_Store
-*.docx
-deploy-zyra.zip
-Imagem do Codex*.png
 node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+.env*

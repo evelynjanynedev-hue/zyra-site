@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms" {
+  strategy: base;
+}
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  --color-brand-50: #f2f6ff;
+  --color-brand-100: #dce8ff;
+  --color-brand-200: #bbd1ff;
+  --color-brand-300: #8fb2ff;
+  --color-brand-400: #5c8bff;
+  --color-brand-500: #2e6bff;
+  --color-brand-600: #1e4da8;
+  --color-brand-700: #153170;
+  --color-brand-800: #0f2350;
+  --color-brand-900: #0a1733;
+  --color-brand-950: #060f24;
+
+  --color-ink: #0a1733;
+  --color-ink-soft: #4b5675;
+
+  --text-hero: 3.25rem;
+  --text-hero--line-height: 1.03;
+  --text-hero--letter-spacing: -0.035em;
+
+  --shadow-soft: 0 1px 2px rgba(10, 23, 51, 0.04),
+    0 12px 32px -12px rgba(10, 23, 51, 0.16);
+  --shadow-card: 0 1px 3px rgba(10, 23, 51, 0.06),
+    0 20px 48px -20px rgba(10, 23, 51, 0.22);
+  --shadow-glow: 0 12px 40px -12px rgba(46, 107, 255, 0.55);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+  ::selection {
+    background: var(--color-brand-500);
+    color: white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:bg-brand-600;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink ring-1 ring-gray-200 transition hover:ring-gray-300;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-ink-soft transition hover:text-ink;
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-500;
+  }
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl;
+  }
+  .section-lead {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg;
+  }
+}
