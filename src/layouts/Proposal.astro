@@ -68,11 +68,40 @@ const {
         ) : (
           <p class="hidden text-sm text-muted sm:block">Pronto para começar?</p>
         )}
-        <a href={wa(ctaMessage)} target="_blank" rel="noopener" class="btn btn-primary ml-auto w-full sm:w-auto">
+        <a href={wa(ctaMessage)} target="_blank" rel="noopener" data-cta="aprovar" class="js-aprovar btn btn-primary ml-auto w-full sm:w-auto">
           {ctaLabel}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
       </div>
     </div>
+
+    <script>
+      // Link rastreável: quando a página é aberta via ?p=<token>, o botão de
+      // aprovação passa pelo ERP (registra o aceite) e segue para o WhatsApp.
+      // Sem ?p=, o botão continua indo direto para o WhatsApp.
+      const erpBase = "http://2.25.254.252";
+      const params = new URLSearchParams(location.search);
+      const token = params.get("p");
+      const empresa = params.get("empresa");
+      const plano = params.get("plano");
+      const valor = params.get("valor");
+
+      if (empresa || plano || valor) {
+        const preenche = (campo, v) => {
+          if (!v) return;
+          document.querySelectorAll(`[data-field="${campo}"]`).forEach((el) => {
+            el.textContent = v;
+          });
+        };
+        preenche("empresa", empresa);
+        preenche("plano", plano);
+        preenche("valor", valor);
+      }
+
+      if (token) {
+        const url = `${erpBase}/api/method/zyra360.proposals.aceitar?p=${encodeURIComponent(token)}`;
+        document.querySelectorAll("a.js-aprovar").forEach((a) => a.setAttribute("href", url));
+      }
+    </script>
   </body>
 </html>

@@ -1,8 +1,9 @@
 ---
 interface Props {
   text: string;
+  field?: string;
 }
-const { text } = Astro.props;
+const { text, field } = Astro.props;
 ---
 
-<span class="rounded-md bg-brand-50 px-1.5 py-0.5 text-[0.9em] font-medium text-brand-700">{text}</span>
+<span data-field={field} class="rounded-md bg-brand-50 px-1.5 py-0.5 text-[0.9em] font-medium text-brand-700">{text}</span>
