@@ -1,29 +1,6 @@
 ---
 import SectionHeader from "../ui/SectionHeader.astro";
-
-const columns = [
-  {
-    stage: "Novos",
-    count: 12,
-    tone: "text-brand-600",
-    dot: "bg-brand-500",
-    cards: ["Clínica Sorriso", "Studio Fit", "Consultório Lima"],
-  },
-  {
-    stage: "Em negociação",
-    count: 7,
-    tone: "text-warning",
-    dot: "bg-warning",
-    cards: ["Escola Aprender", "Oficina Prime"],
-  },
-  {
-    stage: "Ganhos",
-    count: 5,
-    tone: "text-success",
-    dot: "bg-success",
-    cards: ["Padaria Central", "Academia Move"],
-  },
-];
+import DashboardMock from "../DashboardMock.astro";
 ---
 
 <section class="section">
@@ -34,44 +11,9 @@ const columns = [
       lead="Você não precisa perguntar o que aconteceu. A Zyra mantém a operação, os leads, as oportunidades e os próximos passos organizados, para você acompanhar o crescimento sem gerenciar o operacional."
     />
 
-    <div class="relative mt-16">
-      <div class="pointer-events-none absolute inset-x-24 -top-10 -z-10 h-52 rounded-full bg-gradient-to-r from-brand-500/25 via-accent-600/20 to-cyan-400/20 glow-lg"></div>
-      <div class="ring-gradient overflow-hidden rounded-[var(--radius-3xl)] bg-surface shadow-[var(--shadow-xl)]">
-        <div class="flex items-center justify-between border-b border-line px-5 py-4">
-          <div class="flex items-center gap-2">
-            <span class="grid h-7 w-7 place-items-center rounded-lg bg-brand-500 text-xs font-bold text-white">Z</span>
-            <span class="text-sm font-semibold text-ink">Operação</span>
-            <span class="ml-2 rounded-full bg-surface-2 px-2.5 py-1 text-[11px] font-medium text-muted">Pipeline comercial</span>
-          </div>
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-success-soft px-2.5 py-1 text-[11px] font-semibold text-success">
-            <span class="h-1.5 w-1.5 rounded-full bg-success"></span> Ao vivo
-          </span>
-        </div>
-
-        <div class="grid gap-4 p-5 sm:grid-cols-3">
-          {columns.map((c) => (
-            <div class="rounded-2xl border border-line bg-surface-2/50 p-4">
-              <div class="flex items-center justify-between">
-                <p class="flex items-center gap-2 text-sm font-medium text-ink">
-                  <span class:list={["h-2 w-2 rounded-full", c.dot]}></span>{c.stage}
-                </p>
-                <p class:list={["text-sm font-semibold", c.tone]}>{c.count}</p>
-              </div>
-              <div class="mt-3 space-y-2">
-                {c.cards.map((card) => (
-                  <div class="rounded-xl border border-line bg-surface px-3.5 py-3 shadow-[var(--shadow-xs)]">
-                    <p class="text-[13px] font-medium text-ink">{card}</p>
-                    <p class="mt-1 text-[11px] text-faint">Próxima ação definida</p>
-                  </div>
-                ))}
-                <div class="rounded-xl border border-dashed border-line px-3.5 py-2.5 text-center text-[11px] text-faint">
-                  + {c.count - c.cards.length} em acompanhamento
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div class="relative mx-auto mt-16 max-w-4xl">
+      <div class="pointer-events-none absolute inset-x-16 -top-10 -z-10 h-52 rounded-full bg-gradient-to-r from-brand-500/25 via-brand-400/20 to-brand-300/20 glow-lg"></div>
+      <DashboardMock />
     </div>
   </div>
 </section>

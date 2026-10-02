@@ -1,82 +1,115 @@
 ---
-import { plans, wa } from "../../data/site";
+import { plans, planChooser, wa } from "../../data/site";
 import SectionHeader from "../ui/SectionHeader.astro";
+
+const anyPlan = [
+  "Você continua no controle.",
+  "As decisões importantes passam por você.",
+  "A Zyra executa o que estiver previsto no plano.",
+  "Não existe fidelidade.",
+  "O CRM faz parte da operação.",
+  "A estratégia parte da realidade do seu negócio, não de um pacote genérico.",
+];
 ---
 
 <section id="planos" class="section scroll-mt-20">
   <div class="container">
     <SectionHeader
       eyebrow="Planos"
-      title="Comece pequeno. Veja acontecer."
-      lead="Você não precisa montar uma equipe para começar a cuidar do crescimento. E sem fidelidade."
+      title="Comece pequeno. Aumente a operação conforme seu negócio precisa."
+      lead="Você não precisa montar uma equipe de crescimento de uma vez. Comece com uma prioridade clara e, conforme a operação cresce, deixe a Zyra assumir mais do trabalho."
     />
 
     <div class="mt-16 grid items-stretch gap-6 lg:grid-cols-3">
-      {plans.map((plan) => {
-        const featured = plan.highlight;
-        return (
-          <article
-            class:list={[
-              "relative flex flex-col overflow-hidden rounded-[var(--radius-2xl)] p-8",
-              featured
-                ? "ring-gradient bg-gradient-to-b from-brand-50/80 to-surface shadow-[var(--shadow-md)]"
-                : "card",
-            ]}
-          >
-            <div class="relative flex min-h-[3rem] items-center justify-between gap-3">
-              <h3 class="text-lg font-semibold text-ink">{plan.name}</h3>
-              {plan.badge && (
-                <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brand-600 ring-1 ring-brand-100">
-                  {plan.badge}
-                </span>
-              )}
-              {featured && !plan.badge && (
-                <span class="rounded-full bg-accent-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                  Recomendado
-                </span>
-              )}
-            </div>
+      {plans.map((plan) => (
+        <article
+          class:list={[
+            "relative flex flex-col rounded-[var(--radius-2xl)] p-8",
+            plan.highlight
+              ? "ring-gradient bg-gradient-to-b from-brand-50/80 to-surface shadow-[var(--shadow-md)]"
+              : "card",
+          ]}
+        >
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-lg font-semibold text-ink">{plan.name}</h3>
+            {plan.badge && (
+              <span class="rounded-full bg-brand-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
+                {plan.badge}
+              </span>
+            )}
+          </div>
 
-            <p class="relative mt-1.5 text-sm text-muted">{plan.audience}</p>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">{plan.level}</p>
 
-            <p class="relative mt-7 text-[2.5rem] font-semibold leading-none tracking-tight text-ink">
-              R$ {plan.price}<span class="text-base font-medium text-muted">/mês</span>
-            </p>
+          <p class="mt-3 text-[2.5rem] font-semibold leading-none tracking-tight text-ink">
+            R$ {plan.price}<span class="text-base font-medium text-muted">/mês</span>
+          </p>
 
-            <div class="relative mt-7 border-t border-line pt-7">
-              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">A Zyra assume</p>
-              <ul class="mt-4 space-y-2.5 text-sm text-ink">
-                {plan.includes.map((item) => (
-                  <li class="flex items-start gap-3">
-                    <span class="text-brand-500" aria-hidden="true">✓</span>{item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <p class="mt-5 text-sm font-medium text-ink">{plan.audience}</p>
+          <p class="mt-3 text-sm leading-relaxed text-muted">{plan.summary}</p>
 
-            <div class="relative mt-auto pt-7">
-              <p class="text-sm text-muted">{plan.note}</p>
-              <a
-                href={wa(`Olá, quero o plano ${plan.name} da Zyra (R$ ${plan.price}/mês).`)}
-                target="_blank"
-                rel="noopener"
-                class:list={["mt-5 w-full", featured ? "btn btn-primary" : "btn btn-secondary"]}
-              >
-                {plan.cta}
-              </a>
-            </div>
-          </article>
-        );
-      })}
+          <div class="mt-6 border-t border-line pt-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">A Zyra cuida de</p>
+            <ul class="mt-4 space-y-2.5 text-sm text-ink">
+              {plan.includes.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-brand-500" aria-hidden="true">✓</span>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-auto pt-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Seu papel</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">{plan.role}</p>
+            <p class="mt-5 text-sm font-semibold text-brand-600">{plan.outcome}</p>
+            <a
+              href={wa(`Olá, quero o plano ${plan.name} da Zyra (R$ ${plan.price}/mês).`)}
+              target="_blank"
+              rel="noopener"
+              class:list={["mt-6 w-full", plan.highlight ? "btn btn-primary" : "btn btn-secondary"]}
+            >
+              {plan.cta}
+            </a>
+          </div>
+        </article>
+      ))}
     </div>
 
-    <p class="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-muted">
-      A Zyra cuida do marketing, do tráfego e do acompanhamento dos leads. O
-      fechamento da venda é feito pelo seu time comercial, e ajudamos a estruturar
-      esse processo.
-    </p>
-    <p class="mt-4 text-center text-sm font-medium text-muted">
-      Não sabe qual plano escolher? <a href={wa("Olá, quero ajuda para escolher o plano da Zyra.")} target="_blank" rel="noopener" class="font-semibold text-brand-500 underline decoration-brand-200 underline-offset-4 hover:text-brand-600">Fale com nosso time.</a>
-    </p>
+    <div class="mt-16 rounded-[var(--radius-2xl)] border border-line bg-surface-2/60 p-8 sm:p-10">
+      <h3 class="text-lg font-semibold text-ink">Qual plano faz sentido para você?</h3>
+      <div class="mt-6 grid gap-5 sm:grid-cols-3">
+        {planChooser.map((c) => (
+          <div>
+            <p class="text-sm font-semibold text-brand-600">{c.plan}</p>
+            <p class="mt-1.5 text-sm leading-relaxed text-muted">{c.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 border-t border-line pt-8">
+        <p class="text-sm font-semibold text-ink">Em qualquer plano</p>
+        <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+          {anyPlan.map((item) => (
+            <li class="flex items-start gap-3 text-sm text-muted">
+              <span class="text-brand-500" aria-hidden="true">✓</span>{item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <p class="mt-8 text-sm leading-relaxed text-muted">
+        <strong class="font-semibold text-ink">Importante:</strong> o fechamento das
+        vendas continua com o seu time comercial. A Zyra cuida da geração e do
+        acompanhamento dos leads e ajuda a estruturar o processo comercial.
+      </p>
+
+      <div class="mt-8">
+        <a href={wa("Olá, quero meu diagnóstico gratuito com a Zyra.")} target="_blank" rel="noopener" class="btn btn-primary">
+          Quero meu diagnóstico gratuito
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>

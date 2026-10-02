@@ -1,14 +1,4 @@
 ---
-const segments = [
-  "Clínicas",
-  "Consultórios",
-  "Escritórios",
-  "Comércio local",
-  "Indústrias",
-  "Serviços",
-  "Prestadores",
-  "Profissionais liberais",
-];
 const stats = [
   { value: "127+", label: "empresas atendidas" },
   { value: "4", label: "áreas em uma só operação" },
@@ -27,13 +17,7 @@ const stats = [
       </p>
     </div>
 
-    <div class="mt-10 flex flex-wrap justify-center gap-2.5">
-      {segments.map((s) => (
-        <span class="rounded-full border border-line bg-surface px-4 py-1.5 text-sm text-muted">{s}</span>
-      ))}
-    </div>
-
-    <div class="mt-14 grid gap-px overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-12 grid gap-px overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
       {stats.map((s) => (
         <div class="bg-surface px-8 py-9 text-center sm:text-left">
           <p class="text-4xl font-semibold tracking-tight text-ink">{s.value}</p>

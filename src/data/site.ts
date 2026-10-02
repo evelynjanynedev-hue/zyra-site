@@ -24,15 +24,19 @@ export const plans = [
   {
     name: "Essencial",
     price: "550",
-    audience: "Para começar a estruturar o crescimento.",
+    level: "Uma prioridade",
+    audience: "Para começar com uma prioridade clara de crescimento.",
+    summary:
+      "A Zyra assume uma prioridade principal, definida a partir do diagnóstico, e conduz o trabalho necessário para avançá-la.",
     highlight: false,
     badge: null as string | null,
     cta: "Quero começar",
-    note: "Operação focada em uma prioridade por vez, definida a partir do diagnóstico.",
+    role: "Aprovar a estratégia e participar das decisões que realmente precisam de você.",
+    outcome: "Uma prioridade. Uma operação focada. Um próximo passo claro.",
     includes: [
       "Diagnóstico e estratégia inicial",
-      "Uma prioridade principal de crescimento",
-      "Execução das ações previstas",
+      "Definição da prioridade de crescimento",
+      "Execução das ações previstas para essa prioridade",
       "Tráfego pago quando fizer sentido",
       "CRM personalizado",
       "Acompanhamento dos resultados",
@@ -41,39 +45,55 @@ export const plans = [
   {
     name: "Crescimento",
     price: "1.290",
-    audience: "Para ter uma operação contínua de crescimento.",
+    level: "Uma operação contínua",
+    audience: "Para deixar o crescimento nas mãos de uma operação contínua.",
+    summary:
+      "Aqui a Zyra deixa de atuar apenas sobre uma prioridade e passa a conduzir continuamente a operação de crescimento, conectando aquisição, leads, processo comercial e acompanhamento.",
     highlight: true,
-    badge: null as string | null,
+    badge: "Recomendado",
     cta: "Quero o Crescimento",
-    note: "Para empresas que querem deixar de cuidar do crescimento de forma improvisada.",
+    role: "Aprovar as decisões importantes e acompanhar os resultados. A operação fica com a Zyra.",
+    outcome:
+      "A cada ciclo, a Zyra analisa o que aconteceu, identifica o que precisa mudar, define as prioridades e conduz a execução.",
     includes: [
       "Tudo do Essencial, mais:",
       "Marketing e aquisição contínuos",
-      "Acompanhamento de leads",
+      "Acompanhamento dos leads",
       "Estruturação do processo comercial",
-      "Automações",
+      "CRM e automações",
       "Otimização a cada 15 dias",
-      "Relatório e planejamento do próximo ciclo",
+      "Relatório de resultados e planejamento do próximo ciclo",
     ],
   },
   {
     name: "Performance",
     price: "2.490",
-    audience: "Para uma operação mais completa e próxima.",
+    level: "Uma operação mais ativa",
+    audience: "Para uma operação de crescimento mais ativa e próxima.",
+    summary:
+      "A Zyra assume uma operação mais ampla, conectando marketing, aquisição e processo comercial, com mais capacidade de prospecção, experimentação e otimização.",
     highlight: false,
-    badge: "Mais completo",
+    badge: null,
     cta: "Quero o Performance",
-    note: "Para empresas que querem uma operação mais próxima e contínua.",
+    role: "Tomar as decisões que exigem conhecimento ou autoridade do seu negócio. A execução prevista no plano fica com a Zyra.",
+    outcome:
+      "Mais capacidade de execução, experimentação e acompanhamento para uma operação de crescimento mais ativa.",
     includes: [
       "Tudo do Crescimento, mais:",
-      "Integração entre marketing, aquisição e processo comercial",
       "Prospecção com o Hermes",
+      "Integração entre marketing, aquisição e processo comercial",
       "Automações avançadas",
       "Testes e experimentos",
       "Monitoramento contínuo",
-      "Análise estratégica",
+      "Análise estratégica mais próxima",
     ],
   },
+];
+
+export const planChooser = [
+  { plan: "Essencial", text: "Você quer começar e resolver uma prioridade de crescimento." },
+  { plan: "Crescimento", text: "Você quer deixar sua operação de crescimento nas mãos da Zyra." },
+  { plan: "Performance", text: "Você quer uma operação mais ampla, ativa e próxima, com prospecção, experimentação e otimização contínuas." },
 ];
 
 export const faq = [
