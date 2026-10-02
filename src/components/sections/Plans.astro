@@ -13,40 +13,55 @@ import SectionHeader from "../ui/SectionHeader.astro";
 
     <div class="mt-16 grid items-stretch gap-6 lg:grid-cols-3">
       {plans.map((plan) => {
-        const dark = plan.highlight;
+        const featured = plan.highlight;
         return (
-          <article class:list={["relative flex flex-col overflow-hidden rounded-[var(--radius-2xl)] p-8", dark ? "bg-ink text-white shadow-[var(--shadow-xl)]" : "card"]}>
-            {dark && <div class="pointer-events-none absolute inset-x-0 -top-20 h-40 bg-gradient-to-r from-brand-500/40 via-accent-500/40 to-cyan-400/30 glow"></div>}
-
+          <article
+            class:list={[
+              "relative flex flex-col overflow-hidden rounded-[var(--radius-2xl)] p-8",
+              featured
+                ? "ring-gradient bg-gradient-to-b from-brand-50/80 to-surface shadow-[var(--shadow-md)]"
+                : "card",
+            ]}
+          >
             <div class="relative flex min-h-[3rem] items-center justify-between gap-3">
-              <h3 class:list={["text-lg font-semibold", dark ? "text-white" : "text-ink"]}>{plan.name}</h3>
+              <h3 class="text-lg font-semibold text-ink">{plan.name}</h3>
               {plan.badge && (
-                <span class:list={["rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide", dark ? "bg-white/10 text-brand-200 ring-1 ring-white/15" : "bg-brand-50 text-brand-600 ring-1 ring-brand-100"]}>
+                <span class="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brand-600 ring-1 ring-brand-100">
                   {plan.badge}
+                </span>
+              )}
+              {featured && !plan.badge && (
+                <span class="rounded-full bg-accent-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
+                  Recomendado
                 </span>
               )}
             </div>
 
-            <p class:list={["relative mt-1.5 text-sm", dark ? "text-brand-100/70" : "text-muted"]}>{plan.audience}</p>
+            <p class="relative mt-1.5 text-sm text-muted">{plan.audience}</p>
 
-            <p class:list={["relative mt-7 text-[2.5rem] font-semibold leading-none tracking-tight", dark ? "text-white" : "text-ink"]}>
-              R$ {plan.price}<span class:list={["text-base font-medium", dark ? "text-brand-100/60" : "text-muted"]}>/mês</span>
+            <p class="relative mt-7 text-[2.5rem] font-semibold leading-none tracking-tight text-ink">
+              R$ {plan.price}<span class="text-base font-medium text-muted">/mês</span>
             </p>
 
-            <div class:list={["relative mt-7 border-t pt-7", dark ? "border-white/10" : "border-line"]}>
-              <p class:list={["text-xs font-semibold uppercase tracking-[0.18em]", dark ? "text-brand-300" : "text-muted"]}>A Zyra assume</p>
-              <ul class:list={["mt-4 space-y-2.5 text-sm", dark ? "text-brand-100/90" : "text-ink"]}>
+            <div class="relative mt-7 border-t border-line pt-7">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">A Zyra assume</p>
+              <ul class="mt-4 space-y-2.5 text-sm text-ink">
                 {plan.includes.map((item) => (
                   <li class="flex items-start gap-3">
-                    <span class:list={[dark ? "text-brand-300" : "text-brand-500"]} aria-hidden="true">✓</span>{item}
+                    <span class="text-brand-500" aria-hidden="true">✓</span>{item}
                   </li>
                 ))}
               </ul>
             </div>
 
             <div class="relative mt-auto pt-7">
-              <p class:list={["text-sm", dark ? "text-brand-100/70" : "text-muted"]}>{plan.note}</p>
-              <a href={wa(`Olá, quero o plano ${plan.name} da Zyra (R$ ${plan.price}/mês).`)} target="_blank" rel="noopener" class:list={["mt-5 w-full", dark ? "btn btn-primary" : "btn btn-secondary"]}>
+              <p class="text-sm text-muted">{plan.note}</p>
+              <a
+                href={wa(`Olá, quero o plano ${plan.name} da Zyra (R$ ${plan.price}/mês).`)}
+                target="_blank"
+                rel="noopener"
+                class:list={["mt-5 w-full", featured ? "btn btn-primary" : "btn btn-secondary"]}
+              >
                 {plan.cta}
               </a>
             </div>

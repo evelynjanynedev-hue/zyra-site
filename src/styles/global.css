@@ -157,23 +157,73 @@
     box-shadow: var(--shadow-md);
   }
 
+  /* Texto em gradiente (assinatura) */
+  .gradient-text {
+    background-image: linear-gradient(
+      100deg,
+      var(--color-brand-500) 0%,
+      var(--color-accent-600) 45%,
+      var(--color-pink-500) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .gradient-text--light {
+    background-image: linear-gradient(
+      100deg,
+      #ffffff 0%,
+      var(--color-accent-300) 45%,
+      var(--color-cyan-400) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   /* Fundos */
   .aurora {
     background-image: radial-gradient(
-        55% 60% at 16% 6%,
-        color-mix(in oklab, var(--color-brand-500) 22%, transparent) 0%,
+        55% 60% at 14% 6%,
+        color-mix(in oklab, var(--color-brand-500) 26%, transparent) 0%,
         transparent 60%
       ),
       radial-gradient(
-        48% 52% at 86% 2%,
-        color-mix(in oklab, var(--color-accent-500) 20%, transparent) 0%,
+        48% 52% at 82% 0%,
+        color-mix(in oklab, var(--color-accent-600) 24%, transparent) 0%,
         transparent 62%
       ),
       radial-gradient(
-        60% 60% at 50% -5%,
+        42% 48% at 98% 22%,
+        color-mix(in oklab, var(--color-pink-500) 18%, transparent) 0%,
+        transparent 64%
+      ),
+      radial-gradient(
+        60% 60% at 46% -8%,
         color-mix(in oklab, var(--color-cyan-400) 16%, transparent) 0%,
         transparent 66%
       );
+  }
+
+  /* Seção escura azul-marinho com brilho colorido */
+  .bg-navy {
+    background:
+      radial-gradient(
+        60% 55% at 20% 0%,
+        color-mix(in oklab, var(--color-accent-600) 30%, transparent) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        55% 50% at 90% 0%,
+        color-mix(in oklab, var(--color-brand-500) 26%, transparent) 0%,
+        transparent 62%
+      ),
+      radial-gradient(
+        70% 60% at 50% 110%,
+        color-mix(in oklab, var(--color-cyan-400) 14%, transparent) 0%,
+        transparent 66%
+      ),
+      var(--color-navy);
   }
   .grid-lines {
     background-image: linear-gradient(

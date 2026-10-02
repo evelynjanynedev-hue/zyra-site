@@ -9,27 +9,36 @@ const segments = [
   "Prestadores",
   "Profissionais liberais",
 ];
+const stats = [
+  { value: "127+", label: "empresas atendidas" },
+  { value: "4", label: "áreas em uma só operação" },
+  { value: "R$ 550", label: "a partir de, por mês" },
+  { value: "100%", label: "sem fidelidade" },
+];
 ---
 
 <section class="border-y border-line bg-tint">
-  <div class="container py-14">
-    <div class="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
-      <div class="flex items-center gap-5">
-        <p class="text-5xl font-semibold tracking-tight text-ink">80+</p>
-        <div class="text-left">
-          <p class="text-sm font-semibold text-ink">empresas atendidas</p>
-          <p class="mt-0.5 text-sm text-warning" aria-label="Avaliação cinco estrelas">★★★★★</p>
-        </div>
-      </div>
-      <p class="max-w-md text-center text-sm leading-relaxed text-muted lg:text-left">
-        Empresas de diferentes segmentos já confiaram à Zyra parte da sua operação
-        de crescimento.
+  <div class="container py-16">
+    <div class="text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Empresas que confiam</p>
+      <p class="mx-auto mt-4 flex max-w-xl items-center justify-center gap-3">
+        <span class="text-2xl text-warning" aria-label="Avaliação cinco estrelas">★★★★★</span>
+        <span class="text-sm text-muted">Empresas de diferentes segmentos já confiaram à Zyra parte da sua operação de crescimento.</span>
       </p>
     </div>
 
-    <div class="mt-9 flex flex-wrap justify-center gap-2.5 lg:justify-start">
+    <div class="mt-10 flex flex-wrap justify-center gap-2.5">
       {segments.map((s) => (
         <span class="rounded-full border border-line bg-surface px-4 py-1.5 text-sm text-muted">{s}</span>
+      ))}
+    </div>
+
+    <div class="mt-14 grid gap-px overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+      {stats.map((s) => (
+        <div class="bg-surface px-8 py-9 text-center sm:text-left">
+          <p class="text-4xl font-semibold tracking-tight text-ink">{s.value}</p>
+          <p class="mt-2 text-sm text-muted">{s.label}</p>
+        </div>
       ))}
     </div>
   </div>

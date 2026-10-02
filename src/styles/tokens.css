@@ -52,17 +52,24 @@
   --color-brand-900: #0b1c4d;
   --color-brand-950: #070f2b;
 
-  --color-accent-300: #c4b5fd;
-  --color-accent-400: #a78bfa;
-  --color-accent-500: #7c5cff;
-  --color-accent-600: #6438f5;
+  --color-accent-300: #c7bfff;
+  --color-accent-400: #a394ff;
+  --color-accent-500: #7a5cff;
+  --color-accent-600: #635bff;
 
   --color-cyan-400: #38bdf8;
   --color-cyan-500: #0ea5e9;
+  --color-pink-400: #ff7eb6;
+  --color-pink-500: #ec4899;
 
-  --color-ink: #0a0f1f;
-  --color-ink-2: #39415a;
-  --color-muted: #5a6580;
+  /* Azul-marinho (Stripe navy) para seções escuras */
+  --color-navy: #0a2540;
+  --color-navy-2: #0d2d4f;
+  --color-navy-3: #123a63;
+
+  --color-ink: #0a2540;
+  --color-ink-2: #36496a;
+  --color-muted: #56678a;
   --color-faint: #8b95ad;
   --color-line: #e9ecf3;
   --color-surface: #ffffff;
