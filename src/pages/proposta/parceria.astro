@@ -1,0 +1,137 @@
+---
+import Proposal from "../../layouts/Proposal.astro";
+import Section from "../../components/proposal/Section.astro";
+
+const canBe = ["Clientes", "Consultores", "Contadores", "Agências", "Fornecedores", "Profissionais liberais", "Empresários", "Parceiros comerciais"];
+const good = [
+  ["Tem um negócio ativo", "Já está operando e busca crescer ou organizar sua operação."],
+  ["Tem um desafio", "Pode estar com dificuldades em marketing, aquisição, leads, atendimento, vendas ou organização."],
+  ["Pode se beneficiar da Zyra", "Existe uma necessidade compatível com o que a Zyra oferece."],
+  ["Está aberta a conversar", "A empresa sabe que será apresentada à Zyra ou autorizou o compartilhamento do contato."],
+];
+const notNeeded = [
+  ["Apresentar os planos", "A Zyra explica a solução."],
+  ["Fazer diagnóstico", "A Zyra entende o momento da empresa."],
+  ["Negociar", "A Zyra conduz a proposta comercial."],
+  ["Acompanhar o lead", "A Zyra assume o processo comercial."],
+  ["Fechar a venda", "A contratação é conduzida pela Zyra."],
+];
+const statuses = [
+  ["Indicação recebida", "A empresa foi registrada."],
+  ["Em contato", "A Zyra iniciou a conversa."],
+  ["Em diagnóstico", "A empresa está sendo analisada."],
+  ["Proposta apresentada", "Uma proposta foi enviada."],
+  ["Convertida", "A empresa contratou a Zyra."],
+  ["Não convertida", "A oportunidade não avançou."],
+];
+const rules = [
+  "A empresa indicada deve ser identificável.",
+  "O contato deve ter relação legítima com a empresa.",
+  "A indicação não pode ser duplicada.",
+  "A empresa precisa ter sido indicada antes de entrar no processo comercial da Zyra.",
+  "O benefício é gerado somente quando os critérios de conversão forem atendidos.",
+  "Descontos e benefícios seguem os limites e condições do programa vigente.",
+];
+---
+
+<Proposal title="Programa de Parceiros" ctaLabel="Quero ser parceiro" ctaMessage="Olá, quero participar do Programa de Parceiros da Zyra.">
+  <section class="container pt-16 pb-4 sm:pt-24">
+    <p class="eyebrow">Programa de Parceiros Zyra</p>
+    <h1 class="title-h1 mt-5 max-w-3xl text-ink">Indique empresas. A Zyra cuida do resto.</h1>
+    <p class="lead mt-5 max-w-2xl">
+      Você conhece empresas que precisam melhorar marketing, aquisição, atendimento
+      ou vendas? Você pode indicar essas empresas para a Zyra e participar do nosso
+      Programa de Parceiros.
+    </p>
+    <p class="mt-6 text-lg font-semibold text-ink">Você abre a porta. A Zyra conduz a conversa.</p>
+  </section>
+
+  <div class="container">
+    <Section n="01" title="Como funciona">
+      <h3 class="text-base font-semibold text-ink">Você indica</h3>
+      <p>Indique empresas que você acredita que podem se beneficiar da Zyra. A referência pode ser feita pelo seu canal de indicação ou pelo formulário disponibilizado pela Zyra. Nossa sugestão: indicar de 2 a 3 empresas por mês para manter uma frequência saudável de oportunidades.</p>
+      <h3 class="text-base font-semibold text-ink">A Zyra entra em contato</h3>
+      <p>Depois da indicação, nosso time assume a conversa. Nós entendemos o momento da empresa, identificamos os principais desafios, apresentamos a Zyra, fazemos o diagnóstico inicial e conduzimos a proposta comercial. Você não precisa vender a Zyra.</p>
+      <h3 class="text-base font-semibold text-ink">A empresa contrata</h3>
+      <p>Se a empresa indicada contratar a Zyra e a indicação atender aos critérios do programa, ela passa a ser considerada uma indicação convertida. A partir disso, você recebe o benefício correspondente.</p>
+    </Section>
+
+    <Section n="02" title="Seu benefício">
+      <p>As indicações que se transformarem em novos clientes podem gerar descontos adicionais na sua mensalidade Zyra, conforme as regras vigentes do programa.</p>
+      <div class="mt-2 rounded-2xl border border-line bg-surface-2/60 p-6">
+        <p class="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm font-medium text-ink">
+          <span class="rounded-lg border border-line bg-surface px-3 py-1.5">Você indica</span>
+          <span class="text-faint">→</span>
+          <span class="rounded-lg border border-line bg-surface px-3 py-1.5">A empresa conversa com a Zyra</span>
+          <span class="text-faint">→</span>
+          <span class="rounded-lg border border-line bg-surface px-3 py-1.5">A empresa contrata</span>
+          <span class="text-faint">→</span>
+          <span class="rounded-lg border border-line bg-surface px-3 py-1.5">A indicação é validada</span>
+          <span class="text-faint">→</span>
+          <span class="rounded-lg border border-brand-300 bg-brand-50 px-3 py-1.5 text-brand-700">Seu benefício é aplicado</span>
+        </p>
+      </div>
+      <p class="text-sm">O percentual de desconto, limite mensal, período de aplicação e demais condições seguem o regulamento vigente do programa. O benefício é aplicado na mensalidade seguinte, conforme as regras.</p>
+    </Section>
+
+    <Section n="03" title="Quem pode ser parceiro?">
+      <p>O programa é aberto a pessoas e empresas que tenham relacionamento com negócios que possam se beneficiar da Zyra. Podem participar, por exemplo:</p>
+      <ul class="flex flex-wrap gap-2.5">
+        {canBe.map((p) => (<li class="rounded-full border border-line bg-surface px-4 py-1.5 text-sm text-ink">{p}</li>))}
+      </ul>
+      <p>Você não precisa ser especialista em marketing ou vendas. Basta conhecer empresas que possam ter interesse.</p>
+    </Section>
+
+    <Section n="04" title="O que é uma boa indicação?">
+      <div class="grid gap-5 sm:grid-cols-2">
+        {good.map(([t, d]) => (
+          <div class="rounded-2xl border border-line bg-surface p-5">
+            <p class="font-semibold text-ink">{t}</p>
+            <p class="mt-1.5 text-sm">{d}</p>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    <Section n="05" title="O que você não precisa fazer">
+      <p>Depois da indicação, a Zyra assume a condução. Você não precisa:</p>
+      <ul class="space-y-2.5">
+        {notNeeded.map(([t, d]) => (
+          <li class="flex gap-3"><span class="text-brand-500">•</span><span><span class="font-medium text-ink">{t}</span> · {d}</span></li>
+        ))}
+      </ul>
+      <p class="font-semibold text-ink">Seu papel é indicar. O nosso é conduzir.</p>
+    </Section>
+
+    <Section n="06" title="Transparência">
+      <p>Cada indicação possui acompanhamento próprio. Você poderá saber:</p>
+      <div class="grid gap-3 sm:grid-cols-2">
+        {statuses.map(([t, d]) => (
+          <div class="flex gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-sm">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-500"></span>
+            <span><span class="font-medium text-ink">{t}</span> · {d}</span>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    <Section n="07" title="Regras do programa">
+      <p>Para manter o programa justo para todos, as indicações precisam seguir os critérios definidos pela Zyra. Entre eles:</p>
+      <ul class="space-y-2.5">
+        {rules.map((r) => (<li class="flex gap-3"><span class="text-brand-500">•</span>{r}</li>))}
+      </ul>
+      <p>O regulamento completo fica disponível no momento da adesão.</p>
+    </Section>
+  </div>
+
+  <div class="container mt-4">
+    <div class="rounded-[var(--radius-3xl)] bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 p-8 text-white shadow-[var(--shadow-glow)] sm:p-12">
+      <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Comece a indicar</h2>
+      <p class="mt-4 max-w-xl text-white/85">Você não precisa vender a Zyra. Conheceu uma empresa que pode se beneficiar? Indique. A Zyra conversa, entende o momento, apresenta a solução e conduz o processo.</p>
+      <a href="https://wa.me/5562920023208?text=Ol%C3%A1%2C%20quero%20ser%20parceiro%20da%20Zyra%20e%20indicar%20empresas." target="_blank" rel="noopener" class="btn mt-8 bg-white px-6 py-3.5 text-brand-700 hover:bg-white/90">
+        Quero ser parceiro
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </div>
+</Proposal>

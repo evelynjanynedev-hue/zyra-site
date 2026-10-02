@@ -1,0 +1,19 @@
+---
+interface Props {
+  n?: string;
+  title: string;
+}
+const { n, title } = Astro.props;
+---
+
+<section class="border-t border-line py-12 first:border-t-0 sm:py-14">
+  <div class="grid gap-4 md:grid-cols-[3rem_1fr] md:gap-8">
+    {n && <p class="text-sm font-semibold text-brand-600">{n}</p>}
+    <div class:list={[!n ? "md:col-span-2" : ""]}>
+      <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-[1.75rem]">{title}</h2>
+      <div class="mt-5 space-y-4 text-[15px] leading-relaxed text-muted">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

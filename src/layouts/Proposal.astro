@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import { site, wa } from "../data/site";
+
+interface Props {
+  title?: string;
+  ctaLabel?: string;
+  ctaMessage?: string;
+  plan?: string;
+  price?: string;
+}
+const {
+  title = "Proposta",
+  ctaLabel = "Aprovar e começar",
+  ctaMessage = "Olá, quero aprovar a proposta da Zyra.",
+  plan,
+  price,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <title>{title} · Zyra</title>
+    <meta name="description" content="Proposta da Zyra, seu time de crescimento sob demanda." />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur-xl">
+      <div class="container flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/img/logo-zyra.webp" alt="" width="340" height="133" class="h-6 w-auto" />
+          <span class="text-[1.0625rem] font-semibold tracking-tight text-ink">Zyra</span>
+        </a>
+        <span class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Proposta</span>
+      </div>
+    </header>
+
+    <main class="pb-32">
+      <slot />
+    </main>
+
+    <footer class="bg-navy py-14 text-brand-100/70">
+      <div class="container">
+        <div class="flex items-center gap-2">
+          <img src="/img/logo-zyra.webp" alt="" width="340" height="133" class="h-6 w-auto" />
+          <span class="text-[1.0625rem] font-semibold tracking-tight text-white">Zyra</span>
+        </div>
+        <p class="mt-4 max-w-md text-sm leading-relaxed">
+          {site.tagline} Estratégia e execução por nossa conta. Você só aprova e vê os resultados.
+        </p>
+      </div>
+    </footer>
+
+    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-surface/95 backdrop-blur-xl">
+      <div class="container flex items-center justify-between gap-4 py-3">
+        {plan ? (
+          <p class="hidden text-sm text-muted sm:block">
+            <span class="font-semibold text-ink">{plan}</span>
+            {price && <span> · R$ {price}/mês</span>}
+          </p>
+        ) : (
+          <p class="hidden text-sm text-muted sm:block">Pronto para começar?</p>
+        )}
+        <a href={wa(ctaMessage)} target="_blank" rel="noopener" class="btn btn-primary ml-auto w-full sm:w-auto">
+          {ctaLabel}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

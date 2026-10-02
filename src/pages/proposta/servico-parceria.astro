@@ -1,0 +1,149 @@
+---
+import Proposal from "../../layouts/Proposal.astro";
+import Section from "../../components/proposal/Section.astro";
+import Ph from "../../components/proposal/Placeholder.astro";
+
+const flow = ["Entendemos", "Planejamos", "Você aprova", "Executamos", "Acompanhamos", "Otimizamos", "Resultado"];
+---
+
+<Proposal title="Proposta de Crescimento" plan="Crescimento" price="1.290" ctaMessage="Olá, li a proposta da Zyra (serviço + parceria) e quero aprovar e começar.">
+  <section class="container pt-16 pb-4 sm:pt-24">
+    <p class="eyebrow">Proposta de Crescimento</p>
+    <h1 class="title-h1 mt-5 text-ink"><Ph text="[Nome da empresa]" /></h1>
+    <p class="lead mt-5 max-w-2xl">Seu time de crescimento sob demanda. A Zyra assume a operação de crescimento da sua empresa, começando pela prioridade identificada no diagnóstico.</p>
+    <div class="mt-8 flex flex-wrap items-center gap-3 text-sm">
+      <span class="rounded-full border border-line bg-surface px-4 py-1.5 font-medium text-ink"><Ph text="[Plano]" /></span>
+      <span class="rounded-full border border-line bg-surface px-4 py-1.5 font-medium text-ink">R$ <Ph text="[valor]" />/mês</span>
+      <span class="rounded-full border border-line bg-surface px-4 py-1.5 text-muted">Preparada pela Zyra · <Ph text="[data]" /></span>
+    </div>
+  </section>
+
+  <div class="container">
+    <Section n="01" title="O que entendemos">
+      <p>Hoje, o principal desafio identificado é:</p>
+      <p class="text-lg font-semibold text-ink"><Ph text="[problema principal]" /></p>
+      <p>A partir disso, nossa prioridade para o primeiro ciclo será:</p>
+      <p class="text-lg font-semibold text-ink"><Ph text="[objetivo principal]" /></p>
+    </Section>
+
+    <Section n="02" title="O que a Zyra vai fazer">
+      <h3 class="text-base font-semibold text-ink">Estratégia</h3>
+      <ul class="space-y-2.5">
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[ação]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[ação]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[ação]" /></li>
+      </ul>
+      <h3 class="text-base font-semibold text-ink">Execução</h3>
+      <ul class="space-y-2.5">
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[ação]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[ação]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[ação]" /></li>
+      </ul>
+      <h3 class="text-base font-semibold text-ink">Acompanhamento</h3>
+      <ul class="space-y-2.5">
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[indicador]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[indicador]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[indicador]" /></li>
+      </ul>
+      <p>A Zyra conduz a operação e você participa das decisões que realmente precisam da sua aprovação.</p>
+    </Section>
+
+    <Section n="03" title="Primeiro ciclo">
+      <p><span class="font-semibold text-ink">Objetivo:</span> <Ph text="[objetivo específico]" /></p>
+      <p><span class="font-semibold text-ink">Prioridades:</span></p>
+      <ul class="space-y-2.5">
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[prioridade]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[prioridade]" /></li>
+        <li class="flex gap-3"><span class="text-brand-500">•</span><Ph text="[prioridade]" /></li>
+      </ul>
+      <p><span class="font-semibold text-ink">Resultado esperado:</span> <Ph text="[resultado que queremos produzir]" /></p>
+      <p class="text-sm">Os resultados serão acompanhados durante o ciclo e utilizados para definir os próximos ajustes.</p>
+    </Section>
+
+    <Section n="04" title="Investimento">
+      <div class="rounded-2xl border border-line bg-surface-2/60 p-6">
+        <p class="text-sm font-semibold text-ink"><Ph text="[Plano Crescimento]" /></p>
+        <p class="mt-2 text-3xl font-semibold tracking-tight text-ink">R$ <Ph text="[valor]" /><span class="text-base font-medium text-muted">/mês</span></p>
+        <p class="mt-4 text-sm font-semibold text-ink">Inclui:</p>
+        <ul class="mt-2 space-y-2 text-sm">
+          <li>CRM personalizado</li>
+          <li>Acompanhamento dos resultados</li>
+          <li>Otimizações previstas no plano</li>
+          <li><Ph text="[entrega]" /></li>
+        </ul>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>Fidelidade: não</li>
+          <li>Verba de mídia: separada, quando aplicável</li>
+        </ul>
+      </div>
+    </Section>
+
+    <Section n="05" title="Uma oportunidade adicional">
+      <p class="font-semibold text-ink">Quer indicar empresas para a Zyra?</p>
+      <p>Como cliente, você também pode participar do Programa de Parceiros Zyra. Se você conhece empresas que poderiam se beneficiar da nossa operação de crescimento, pode indicá-las para a Zyra.</p>
+      <div class="grid gap-5 sm:grid-cols-3">
+        <div class="rounded-2xl border border-line bg-surface p-5">
+          <p class="font-semibold text-ink">Você indica</p>
+          <p class="mt-1.5 text-sm">Indique 2 a 3 empresas por mês que tenham potencial interesse na Zyra.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-surface p-5">
+          <p class="font-semibold text-ink">A Zyra conduz</p>
+          <p class="mt-1.5 text-sm">Nós entramos em contato e fazemos toda a conversa comercial. Você não precisa negociar nem acompanhar o lead.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-surface p-5">
+          <p class="font-semibold text-ink">Se a indicação virar cliente</p>
+          <p class="mt-1.5 text-sm">Você recebe benefícios adicionais na sua mensalidade, conforme as regras do programa.</p>
+        </div>
+      </div>
+      <p class="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm font-medium text-ink">
+        <span class="rounded-lg border border-line bg-surface px-3 py-1.5">Indicação</span>
+        <span class="text-faint">→</span>
+        <span class="rounded-lg border border-line bg-surface px-3 py-1.5">Empresa conversa com a Zyra</span>
+        <span class="text-faint">→</span>
+        <span class="rounded-lg border border-line bg-surface px-3 py-1.5">Contratação</span>
+        <span class="text-faint">→</span>
+        <span class="rounded-lg border border-brand-300 bg-brand-50 px-3 py-1.5 text-brand-700">Benefício na sua mensalidade</span>
+      </p>
+      <p class="text-sm">Os critérios, limites e percentual de desconto são definidos no regulamento do Programa de Parceiros.</p>
+    </Section>
+
+    <Section n="06" title="Você continua no controle">
+      <p>A parceria é totalmente opcional. Você pode contratar somente a Zyra ou contratar a Zyra e participar do Programa de Parceiros. Uma coisa não condiciona a outra.</p>
+      <p class="font-semibold text-ink">A Zyra conduz a operação. Você continua no controle.</p>
+    </Section>
+
+    <Section n="07" title="Próximos passos">
+      <h3 class="text-base font-semibold text-ink">Se você quiser contratar a Zyra</h3>
+      <ol class="space-y-3">
+        {["Aprovação da proposta", "Contratação", "Onboarding", "Estratégia", "Execução"].map((s, i) => (
+          <li class="flex gap-4"><span class="font-semibold text-brand-600">{String(i + 1).padStart(2, "0")}</span><span>{s}</span></li>
+        ))}
+      </ol>
+      <h3 class="pt-2 text-base font-semibold text-ink">Se também quiser ser parceiro</h3>
+      <p>Após a contratação, ativamos seu cadastro no Programa de Parceiros. Você recebe seu link ou formulário de indicação e pode começar a indicar empresas.</p>
+      <p class="flex flex-wrap items-center gap-x-2 gap-y-2 pt-1 font-semibold text-ink">
+        {flow.map((s, i) => (
+          <span class="flex items-center gap-2">
+            <span class="text-sm font-medium">{s}</span>
+            {i < flow.length - 1 && <span class="text-faint">→</span>}
+          </span>
+        ))}
+        <span class="text-brand-500">↺</span>
+      </p>
+    </Section>
+  </div>
+
+  <div class="container mt-4">
+    <div class="rounded-[var(--radius-3xl)] bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 p-8 text-white shadow-[var(--shadow-glow)] sm:p-12">
+      <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Vamos começar?</h2>
+      <div class="mt-6 grid gap-4 text-sm sm:grid-cols-2">
+        <p><span class="block text-white/70">Serviço contratado</span><span class="font-semibold"><Ph text="[Plano]" /> · R$ <Ph text="[valor]" />/mês</span></p>
+        <p><span class="block text-white/70">Programa de Parceiros</span><span class="font-semibold">Opcional · indique empresas e tenha benefícios</span></p>
+      </div>
+      <a href="https://wa.me/5562920023208?text=Ol%C3%A1%2C%20quero%20aprovar%20a%20proposta%20da%20Zyra%20(servi%C3%A7o%20%2B%20parceria)." target="_blank" rel="noopener" class="btn mt-8 bg-white px-6 py-3.5 text-brand-700 hover:bg-white/90">
+        Aprovar e começar
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </div>
+</Proposal>
